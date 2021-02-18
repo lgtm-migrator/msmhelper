@@ -35,6 +35,31 @@ All rights reserved.</p>
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
+<dt id="msmhelper.md.estimate_paths"><code class="name flex">
+<span>def <span class="ident">estimate_paths</span></span>(<span>trajs, start, final)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Estimates paths and waiting times between stated states.</p>
+<p>The stated states (from/to) will be treated as a basin. The function
+calculates all transitions from first entering the start-basin until first
+reaching the final-basin. The results will be listed by the corresponding
+pathways, where loops are removed occuring first.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>trajs</code></strong> :&ensp;<code>statetraj</code> or <code>list</code> or <code>ndarray</code> or <code>list</code> of <code>ndarray</code></dt>
+<dd>State trajectory/trajectories. The states should start from zero and
+need to be integers.</dd>
+<dt><strong><code>start</code></strong> :&ensp;<code>int</code> or <code>list of</code></dt>
+<dd>States to start counting.</dd>
+<dt><strong><code>final</code></strong> :&ensp;<code>int</code> or <code>list of</code></dt>
+<dd>States to start counting.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>paths</code></strong> :&ensp;<code>ndarray</code></dt>
+<dd>List of waiting times, given in frames.</dd>
+</dl></div>
+</dd>
 <dt id="msmhelper.md.estimate_waiting_times"><code class="name flex">
 <span>def <span class="ident">estimate_waiting_times</span></span>(<span>trajs, start, final)</span>
 </code></dt>
@@ -129,6 +154,7 @@ setTimeout(() => input.focus(), 100);
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
+<li><code><a title="msmhelper.md.estimate_paths" href="#msmhelper.md.estimate_paths">estimate_paths</a></code></li>
 <li><code><a title="msmhelper.md.estimate_waiting_times" href="#msmhelper.md.estimate_waiting_times">estimate_waiting_times</a></code></li>
 <li><code><a title="msmhelper.md.estimate_wt" href="#msmhelper.md.estimate_wt">estimate_wt</a></code></li>
 </ul>

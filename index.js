@@ -35,6 +35,12 @@ INDEX=[
 "func":1
 },
 {
+"ref":"msmhelper.md.estimate_paths",
+"url":1,
+"doc":"Estimates paths and waiting times between stated states. The stated states (from/to) will be treated as a basin. The function calculates all transitions from first entering the start-basin until first reaching the final-basin. The results will be listed by the corresponding pathways, where loops are removed occuring first. Parameters      trajs : statetraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. start : int or list of States to start counting. final : int or list of States to start counting. Returns    - paths : ndarray List of waiting times, given in frames.",
+"func":1
+},
+{
 "ref":"msmhelper.linalg",
 "url":2,
 "doc":"Basic linear algebra method. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
