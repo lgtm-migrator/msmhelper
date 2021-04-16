@@ -1,14 +1,13 @@
 URLS=[
 "msmhelper/index.html",
 "msmhelper/md.html",
-"msmhelper/linalg.html",
+"msmhelper/compare.html",
 "msmhelper/tests.html",
 "msmhelper/msm.html",
-"msmhelper/compare.html",
-"msmhelper/iotext.html",
-"msmhelper/statetraj.html",
-"msmhelper/decorators.html",
 "msmhelper/tools.html",
+"msmhelper/iotext.html",
+"msmhelper/linalg.html",
+"msmhelper/statetraj.html",
 "msmhelper/benchmark.html"
 ];
 INDEX=[
@@ -25,7 +24,7 @@ INDEX=[
 {
 "ref":"msmhelper.md.estimate_wt",
 "url":1,
-"doc":"This function is the shortcut of  estimate_waiting_times .See its docstring for further help.",
+"doc":"This function is an alias of  estimate_waiting_times .See its docstring for further help.",
 "func":1
 },
 {
@@ -41,56 +40,14 @@ INDEX=[
 "func":1
 },
 {
-"ref":"msmhelper.linalg",
+"ref":"msmhelper.compare",
 "url":2,
-"doc":"Basic linear algebra method. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
+"doc":"Set of helpful functions for comparing markov state models. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
 },
 {
-"ref":"msmhelper.linalg.eigl",
+"ref":"msmhelper.compare.compare_discretization",
 "url":2,
-"doc":"This function is the shortcut of  left_eigenvectors .See its docstring for further help.",
-"func":1
-},
-{
-"ref":"msmhelper.linalg.left_eigenvectors",
-"url":2,
-"doc":"Estimate left eigenvectors. Estimates the left eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
-"func":1
-},
-{
-"ref":"msmhelper.linalg.eig",
-"url":2,
-"doc":"This function is the shortcut of  right_eigenvectors .See its docstring for further help.",
-"func":1
-},
-{
-"ref":"msmhelper.linalg.right_eigenvectors",
-"url":2,
-"doc":"Estimate right eigenvectors. Estimates the right eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
-"func":1
-},
-{
-"ref":"msmhelper.linalg.eiglvals",
-"url":2,
-"doc":"This function is the shortcut of  left_eigenvalues .See its docstring for further help.",
-"func":1
-},
-{
-"ref":"msmhelper.linalg.left_eigenvalues",
-"url":2,
-"doc":"Estimate left eigenvalues. Estimates the left eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
-"func":1
-},
-{
-"ref":"msmhelper.linalg.eigvals",
-"url":2,
-"doc":"This function is the shortcut of  right_eigenvalues .See its docstring for further help.",
-"func":1
-},
-{
-"ref":"msmhelper.linalg.right_eigenvalues",
-"url":2,
-"doc":"Estimate right eigenvalues. Estimates the right eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
+"doc":"Compare similarity of two state discretizations. This method compares the similarity of two state discretizations of the same dataset. There are two different methods, 'directed' gives a measure on how high is the probable to assign a frame correclty knowing the  traj1 . Hence splitting a state into many is not penalized, while merging multiple into a single state is. Selecting 'symmetric' it is check in both directions, so it checks for each state if it is possible to assigned it forward or backward. Hence, splitting and merging states is not penalized. Parameters      traj1 : StateTraj like First state discretization. traj2 : StateTraj like Second state discretization. method : ['symmetric', 'directed'] Selecting similarity norm. 'symmetric' compares if each frame is forward or backward assignable, while 'directed' checks only if it is forard assignable. Returns    - similarity : float Similarity going from [0, 1], where 1 means identical and 0 no similarity at all.",
 "func":1
 },
 {
@@ -119,7 +76,7 @@ INDEX=[
 {
 "ref":"msmhelper.tests.is_tmat",
 "url":3,
-"doc":"This function is the shortcut of  is_transition_matrix .See its docstring for further help.",
+"doc":"This function is an alias of  is_transition_matrix .See its docstring for further help.",
 "func":1
 },
 {
@@ -166,7 +123,7 @@ INDEX=[
 {
 "ref":"msmhelper.msm.peq",
 "url":4,
-"doc":"This function is the shortcut of  equilibrium_population .See its docstring for further help.",
+"doc":"This function is an alias of  equilibrium_population .See its docstring for further help.",
 "func":1
 },
 {
@@ -176,14 +133,68 @@ INDEX=[
 "func":1
 },
 {
-"ref":"msmhelper.compare",
+"ref":"msmhelper.tools",
 "url":5,
-"doc":"Set of helpful functions for comparing markov state models. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
+"doc":"Set of helpful functions. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved. TODO: - Correct border effects of running mean"
 },
 {
-"ref":"msmhelper.compare.compare_discretization",
+"ref":"msmhelper.tools.shift_data",
 "url":5,
-"doc":"Compare similarity of two state discretizations. This method compares the similarity of two state discretizations of the same dataset. There are two different methods, 'directed' gives a measure on how high is the probable to assign a frame correclty knowing the  traj1 . Hence splitting a state into many is not penalized, while merging multiple into a single state is. Selecting 'symmetric' it is check in both directions, so it checks for each state if it is possible to assigned it forward or backward. Hence, splitting and merging states is not penalized. Parameters      traj1 : StateTraj like First state discretization. traj2 : StateTraj like Second state discretization. method : ['symmetric', 'directed'] Selecting similarity norm. 'symmetric' compares if each frame is forward or backward assignable, while 'directed' checks only if it is forard assignable. Returns    - similarity : float Similarity going from [0, 1], where 1 means identical and 0 no similarity at all.",
+"doc":"Shift integer array (data) from old to new values. >  CAUTION: > The values of  val_old ,  val_new and  data needs to be integers. The basic function is based on Ashwini_Chaudhary solution: https: stackoverflow.com/a/29408060 Parameters      array : StateTraj or ndarray or list or list of ndarrays 1D data or a list of data. val_old : ndarray or list Values in data which should be replaced. All values needs to be within the range of  [data.min(), data.max()] val_new : ndarray or list Values which will be used instead of old ones. dtype : data-type, optional The desired data-type. Needs to be of type unsigned integer. Returns    - array : ndarray Shifted data in same shape as input.",
+"func":1
+},
+{
+"ref":"msmhelper.tools.rename_by_population",
+"url":5,
+"doc":"Rename states sorted by their population starting from 1. Parameters      trajs : list or ndarray or list of ndarrays State trajectory or list of state trajectories. return_permutation : bool Return additionaly the permutation to achieve performed renaming. Default is False. Returns    - trajs : ndarray Renamed data. permutation : ndarray Permutation going from old to new state nameing. So the  i th state of the new naming corresponds to the old state  permutation[i-1] .",
+"func":1
+},
+{
+"ref":"msmhelper.tools.rename_by_index",
+"url":5,
+"doc":"Rename states sorted by their numerical values starting from 0. Parameters      trajs : list or ndarray or list of ndarrays State trajectory or list of state trajectories. return_permutation : bool Return additionaly the permutation to achieve performed renaming. Default is False. Returns    - trajs : ndarray Renamed data. permutation : ndarray Permutation going from old to new state nameing. So the  i th state of the new naming corresponds to the old state  permutation[i-1] .",
+"func":1
+},
+{
+"ref":"msmhelper.tools.unique",
+"url":5,
+"doc":"Apply numpy.unique to traj. Parameters      trajs : list or ndarray or list of ndarrays State trajectory or list of state trajectories. kwargs Arguments of [numpy.unique()](NP_DOC.numpy.unique.html) Returns    - unique Array containing all states, see numpy for more details.",
+"func":1
+},
+{
+"ref":"msmhelper.tools.runningmean",
+"url":5,
+"doc":"Compute centered running average with given window size. This function returns the centered based running average of the given data. The output of this function is of the same length as the input, by assuming that the given data is zero before and after the given series. Hence, there are border affects which are not corrected. >  CAUTION: > If the given window is even (not symmetric) it will be shifted towards > the beginning of the current value. So for  window=4 , it will consider > the current position \\(i\\), the two to the left \\(i-2\\) and \\(i-1\\) and > one to the right \\(i+1\\). Function is taken from lapis: https: stackoverflow.com/questions/13728392/moving-average-or-running-mean Parameters      array : ndarray One dimensional numpy array. window : int Integer which specifies window-width. Returns    - array_rmean : ndarray Data which is time-averaged over the specified window.",
+"func":1
+},
+{
+"ref":"msmhelper.tools.swapcols",
+"url":5,
+"doc":"Interchange cols of an ndarray. This method swaps the specified columns.  todo Optimize memory usage Parameters      array : ndarray 2D numpy array. indicesold : integer or ndarray 1D array of indices. indicesnew : integer or ndarray 1D array of new indices Returns    - array_swapped : ndarray 2D numpy array with swappend columns.",
+"func":1
+},
+{
+"ref":"msmhelper.tools.get_runtime_user_information",
+"url":5,
+"doc":"Get user runtime information. >  CAUTION: > For python 3.5 or lower the date is not formatted and contains > microscends. Returns    - RUI : dict Holding username in 'user', pc name in 'pc', date of execution 'date', path of execution 'script_dir' and name of execution main file 'script_name'. In case of interactive usage, script_name is 'console'.",
+"func":1
+},
+{
+"ref":"msmhelper.tools.format_state_traj",
+"url":5,
+"doc":"Convert state trajectory to list of ndarrays. Parameters      trajs : list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. Returns    - trajs : list of ndarray Return list of ndarrays of integers.",
+"func":1
+},
+{
+"ref":"msmhelper.tools.matrix_power",
+"url":5,
+"doc":"Calculate matrix power with np.linalg.matrix_power. Same as numpy function, except only for float matrices. See [np.linalg.matrix_power](NP_DOC/numpy.linalg.matrix_power.html). Parameters      matrix : ndarray 2d matrix of type float. power : int, float Power of matrix. Returns    - matpow : ndarray Matrix power.",
+"func":1
+},
+{
+"ref":"msmhelper.tools.find_first",
+"url":5,
+"doc":"Return first occurance of item in array.",
 "func":1
 },
 {
@@ -227,256 +238,221 @@ INDEX=[
 "func":1
 },
 {
-"ref":"msmhelper.statetraj",
+"ref":"msmhelper.linalg",
 "url":7,
+"doc":"Basic linear algebra method. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
+},
+{
+"ref":"msmhelper.linalg.eigl",
+"url":7,
+"doc":"This function is an alias of  left_eigenvectors .See its docstring for further help.",
+"func":1
+},
+{
+"ref":"msmhelper.linalg.left_eigenvectors",
+"url":7,
+"doc":"Estimate left eigenvectors. Estimates the left eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
+"func":1
+},
+{
+"ref":"msmhelper.linalg.eig",
+"url":7,
+"doc":"This function is an alias of  right_eigenvectors .See its docstring for further help.",
+"func":1
+},
+{
+"ref":"msmhelper.linalg.right_eigenvectors",
+"url":7,
+"doc":"Estimate right eigenvectors. Estimates the right eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
+"func":1
+},
+{
+"ref":"msmhelper.linalg.eiglvals",
+"url":7,
+"doc":"This function is an alias of  left_eigenvalues .See its docstring for further help.",
+"func":1
+},
+{
+"ref":"msmhelper.linalg.left_eigenvalues",
+"url":7,
+"doc":"Estimate left eigenvalues. Estimates the left eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
+"func":1
+},
+{
+"ref":"msmhelper.linalg.eigvals",
+"url":7,
+"doc":"This function is an alias of  right_eigenvalues .See its docstring for further help.",
+"func":1
+},
+{
+"ref":"msmhelper.linalg.right_eigenvalues",
+"url":7,
+"doc":"Estimate right eigenvalues. Estimates the right eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
+"func":1
+},
+{
+"ref":"msmhelper.statetraj",
+"url":8,
 "doc":"Class for handling discrete state trajectories. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj",
-"url":7,
+"url":8,
 "doc":"Class for handling discrete state trajectories. Initialize StateTraj and convert to index trajectories. If called with StateTraj instance, it will be retuned instead. Parameters      trajs : list or ndarray or list of ndarray State trajectory/trajectories. The states need to be integers."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.states",
-"url":7,
+"url":8,
 "doc":"Return active set of states. Returns    - states : ndarray Numpy array holding active set of states."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.nstates",
-"url":7,
+"url":8,
 "doc":"Return number of states. Returns    - nstates : int Number of states."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.ntrajs",
-"url":7,
+"url":8,
 "doc":"Return number of trajectories. Returns    - ntrajs : int Number of trajectories."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.nframes",
-"url":7,
+"url":8,
 "doc":"Return cummulated length of all trajectories. Returns    - nframes : int Number of frames of all trajectories."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.state_trajs",
-"url":7,
+"url":8,
 "doc":"Return state trajectory. Returns    - trajs : list of ndarrays List of ndarrays holding the input data."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.state_trajs_flatten",
-"url":7,
+"url":8,
 "doc":"Return flattened state trajectory. Returns    - trajs : ndarray 1D ndarrays representation of state trajectories."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.index_trajs",
-"url":7,
+"url":8,
 "doc":"Return index trajectory. Same as  self.trajs Returns    - trajs : list of ndarrays List of ndarrays holding the input data."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.trajs",
-"url":7,
+"url":8,
 "doc":"Return index trajectory. Returns    - trajs : list of ndarrays List of ndarrays holding the input data."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.trajs_flatten",
-"url":7,
+"url":8,
 "doc":"Return flattened index trajectory. Returns    - trajs : ndarray 1D ndarrays representation of index trajectories."
 },
 {
 "ref":"msmhelper.statetraj.StateTraj.estimate_markov_model",
-"url":7,
+"url":8,
 "doc":"Estimates Markov State Model. This method estimates the MSM based on the transition count matrix. Parameters      lagtime : int Lag time for estimating the markov model given in [frames]. Returns    - T : ndarray Transition rate matrix. permutation : ndarray Array with corresponding states.",
 "func":1
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj",
-"url":7,
+"url":8,
 "doc":"Class for handling lumped discrete state trajectories. Initialize LumpedStateTraj and convert to index trajectories. If called with LumpedStateTraj instance, it will be retuned instead. Parameters      macrotrajs : list or ndarray or list of ndarray Lumped state trajectory/trajectories. The states need to be integers and all states needs to correspond to union of microstates. microtrajs : list or ndarray or list of ndarray State trajectory/trajectories. EaThe states should start from zero and need to be integers."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.states",
-"url":7,
+"url":8,
 "doc":"Return active set of macrostates. Returns    - states : ndarray Numpy array holding active set of states."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.nstates",
-"url":7,
+"url":8,
 "doc":"Return number of macrostates. Returns    - nstates : int Number of states."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.microstate_trajs",
-"url":7,
+"url":8,
 "doc":"Return microstate trajectory. Returns    - trajs : list of ndarrays List of ndarrays holding the input data."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.microstate_trajs_flatten",
-"url":7,
+"url":8,
 "doc":"Return flattened state trajectory. Returns    - trajs : ndarray 1D ndarrays representation of state trajectories."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.state_trajs",
-"url":7,
+"url":8,
 "doc":"Return macrostate trajectory. Returns    - trajs : list of ndarrays List of ndarrays holding the input macrostate data."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.state_trajs_flatten",
-"url":7,
+"url":8,
 "doc":"Return flattened macrostate trajectory. Returns    - trajs : ndarray 1D ndarrays representation of macrostate trajectories."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.microstates",
-"url":7,
+"url":8,
 "doc":"Return active set of states. Returns    - states : ndarray Numpy array holding active set of states."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.nmicrostates",
-"url":7,
+"url":8,
 "doc":"Return number of states. Returns    - nstates : int Number of states."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.estimate_markov_model",
-"url":7,
+"url":8,
 "doc":"Estimates Markov State Model. This method estimates the microstate MSM based on the transition count matrix, followed by Szabo-Hummer projection formalism to macrostates. Parameters      lagtime : int Lag time for estimating the markov model given in [frames]. Returns    - T : ndarray Transition rate matrix. permutation : ndarray Array with corresponding states.",
 "func":1
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.ntrajs",
-"url":7,
+"url":8,
 "doc":"Return number of trajectories. Returns    - ntrajs : int Number of trajectories."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.nframes",
-"url":7,
+"url":8,
 "doc":"Return cummulated length of all trajectories. Returns    - nframes : int Number of frames of all trajectories."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.index_trajs",
-"url":7,
+"url":8,
 "doc":"Return index trajectory. Same as  self.trajs Returns    - trajs : list of ndarrays List of ndarrays holding the input data."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.trajs",
-"url":7,
+"url":8,
 "doc":"Return index trajectory. Returns    - trajs : list of ndarrays List of ndarrays holding the input data."
 },
 {
 "ref":"msmhelper.statetraj.LumpedStateTraj.trajs_flatten",
-"url":7,
+"url":8,
 "doc":"Return flattened index trajectory. Returns    - trajs : ndarray 1D ndarrays representation of index trajectories."
 },
 {
-"ref":"msmhelper.decorators",
-"url":8,
-"doc":"Decorators. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
-},
-{
-"ref":"msmhelper.decorators.deprecated",
-"url":8,
-"doc":"Add deprecated warning. Parameters      msg : str Message of deprecated warning. since : str Version since deprecated, e.g. '1.0.2' remove : str Version this function will be removed, e.g. '0.14.2' Returns    - f : function Return decorated function. Examples     >>> @deprecated(msg='Use lag_time instead.', remove='1.0.0') >>> def lagtime(args):  . pass  function goes here  If function is called, you will get warning >>> lagtime( .) Calling deprecated function lagtime. Use lag_time instead.  Function will be removed starting from 1.0.0",
-"func":1
-},
-{
-"ref":"msmhelper.decorators.shortcut",
-"url":8,
-"doc":"Add alternative identity to function. This decorator supports only functions and no class members! Parameters      name : str Alternative function name. Returns    - f : function Return decorated function. Examples     >>> @shortcut('tau') >>> def lagtime(args):  . pass  function goes here  Function can now be called via shortcut. >>> tau( .)  noqa",
-"func":1
-},
-{
-"ref":"msmhelper.decorators.debug",
-"url":8,
-"doc":"Print each call with arguments.",
-"func":1
-},
-{
-"ref":"msmhelper.tools",
-"url":9,
-"doc":"Set of helpful functions. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved. TODO: - Correct border effects of running mean"
-},
-{
-"ref":"msmhelper.tools.shift_data",
-"url":9,
-"doc":"Shift integer array (data) from old to new values. >  CAUTION: > The values of  val_old ,  val_new and  data needs to be integers. The basic function is based on Ashwini_Chaudhary solution: https: stackoverflow.com/a/29408060 Parameters      array : StateTraj or ndarray or list or list of ndarrays 1D data or a list of data. val_old : ndarray or list Values in data which should be replaced. All values needs to be within the range of  [data.min(), data.max()] val_new : ndarray or list Values which will be used instead of old ones. dtype : data-type, optional The desired data-type. Needs to be of type unsigned integer. Returns    - array : ndarray Shifted data in same shape as input.",
-"func":1
-},
-{
-"ref":"msmhelper.tools.rename_by_population",
-"url":9,
-"doc":"Rename states sorted by their population starting from 1. Parameters      trajs : list or ndarray or list of ndarrays State trajectory or list of state trajectories. return_permutation : bool Return additionaly the permutation to achieve performed renaming. Default is False. Returns    - trajs : ndarray Renamed data. permutation : ndarray Permutation going from old to new state nameing. So the  i th state of the new naming corresponds to the old state  permutation[i-1] .",
-"func":1
-},
-{
-"ref":"msmhelper.tools.rename_by_index",
-"url":9,
-"doc":"Rename states sorted by their numerical values starting from 0. Parameters      trajs : list or ndarray or list of ndarrays State trajectory or list of state trajectories. return_permutation : bool Return additionaly the permutation to achieve performed renaming. Default is False. Returns    - trajs : ndarray Renamed data. permutation : ndarray Permutation going from old to new state nameing. So the  i th state of the new naming corresponds to the old state  permutation[i-1] .",
-"func":1
-},
-{
-"ref":"msmhelper.tools.unique",
-"url":9,
-"doc":"Apply numpy.unique to traj. Parameters      trajs : list or ndarray or list of ndarrays State trajectory or list of state trajectories. kwargs Arguments of [numpy.unique()](NP_DOC.numpy.unique.html) Returns    - unique Array containing all states, see numpy for more details.",
-"func":1
-},
-{
-"ref":"msmhelper.tools.runningmean",
-"url":9,
-"doc":"Compute centered running average with given window size. This function returns the centered based running average of the given data. The output of this function is of the same length as the input, by assuming that the given data is zero before and after the given series. Hence, there are border affects which are not corrected. >  CAUTION: > If the given window is even (not symmetric) it will be shifted towards > the beginning of the current value. So for  window=4 , it will consider > the current position \\(i\\), the two to the left \\(i-2\\) and \\(i-1\\) and > one to the right \\(i+1\\). Function is taken from lapis: https: stackoverflow.com/questions/13728392/moving-average-or-running-mean Parameters      array : ndarray One dimensional numpy array. window : int Integer which specifies window-width. Returns    - array_rmean : ndarray Data which is time-averaged over the specified window.",
-"func":1
-},
-{
-"ref":"msmhelper.tools.swapcols",
-"url":9,
-"doc":"Interchange cols of an ndarray. This method swaps the specified columns.  todo Optimize memory usage Parameters      array : ndarray 2D numpy array. indicesold : integer or ndarray 1D array of indices. indicesnew : integer or ndarray 1D array of new indices Returns    - array_swapped : ndarray 2D numpy array with swappend columns.",
-"func":1
-},
-{
-"ref":"msmhelper.tools.get_runtime_user_information",
-"url":9,
-"doc":"Get user runtime information. >  CAUTION: > For python 3.5 or lower the date is not formatted and contains > microscends. Returns    - RUI : dict Holding username in 'user', pc name in 'pc', date of execution 'date', path of execution 'script_dir' and name of execution main file 'script_name'. In case of interactive usage, script_name is 'console'.",
-"func":1
-},
-{
-"ref":"msmhelper.tools.format_state_traj",
-"url":9,
-"doc":"Convert state trajectory to list of ndarrays. Parameters      trajs : list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. Returns    - trajs : list of ndarray Return list of ndarrays of integers.",
-"func":1
-},
-{
-"ref":"msmhelper.tools.matrix_power",
-"url":9,
-"doc":"Calculate matrix power with np.linalg.matrix_power. Same as numpy function, except only for float matrices. See [np.linalg.matrix_power](NP_DOC/numpy.linalg.matrix_power.html). Parameters      matrix : ndarray 2d matrix of type float. power : int, float Power of matrix. Returns    - matpow : ndarray Matrix power.",
-"func":1
-},
-{
-"ref":"msmhelper.tools.find_first",
-"url":9,
-"doc":"Return first occurance of item in array.",
-"func":1
-},
-{
 "ref":"msmhelper.benchmark",
-"url":10,
+"url":9,
 "doc":"Benchmark Markov State Model. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
 },
 {
 "ref":"msmhelper.benchmark.ck_test",
-"url":10,
-"doc":"This function is the shortcut of  chapman_kolmogorov_test .See its docstring for further help.",
+"url":9,
+"doc":"This function is an alias of  chapman_kolmogorov_test .See its docstring for further help.",
 "func":1
 },
 {
 "ref":"msmhelper.benchmark.chapman_kolmogorov_test",
-"url":10,
+"url":9,
 "doc":"Calculate the Chapman Kolmogorov equation. This method estimates the Chapman Kolmogorov equation  T(\\tau n) = T^n(\\tau)\\;. Projected onto the diagonal this is known as the Chapman Kolmogorov test. For more details see, e.g., the review Prinz et al.[^1]. [^1]: Prinz et al.  Markov models of molecular kinetics: Generation and validation ,  J. Chem. Phys. , 134, 174105 (2011), doi:[10.1063/1.3565032](https: doi.org/10.1063/1.3565032) Parameters      trajs : StateTraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtimes : list or ndarray int Lagtimes for estimating the markov model given in [frames]. tmax : int Longest time to evaluate the CK equation given in [frames]. Returns    - cktest : dict Dictionary holding for each lagtime the ckequation and with 'md' the reference.",
 "func":1
 },
 {
 "ref":"msmhelper.benchmark.bh_test",
-"url":10,
-"doc":"This function is the shortcut of  buchete_hummer_test .See its docstring for further help.",
+"url":9,
+"doc":"This function is an alias of  buchete_hummer_test .See its docstring for further help.",
 "func":1
 },
 {
 "ref":"msmhelper.benchmark.buchete_hummer_test",
-"url":10,
+"url":9,
 "doc":"Calculate the Buchete Hummer test. This method estimates the Buchete Hummer autocorrelation test. Projecting the state trajectory onto the right eigenvectors of the row normalized transition matrix  C_{lm} (t) = \\langle \\phi_l[s(\\tau +t)] \\phi_m[S(\\tau)]\\rangle where \\(\\phi_i\\) is the \\(i\\)-th right eigenvector. Buchete and Hummer[^2] showed that for a Markovian system it obeys an exponentil decay, corresponds to  C_{lm} (t) = \\delta_{lm} \\exp(-t / t_k) with the implied timescale \\(t_k = - \\tau_\\text{lag} / \\ln \\lambda_k\\). [^2]: Buchete and Hummer  Coarse master equations for peptide folding dynamics ,  J. Phys. Chem. , 112, 6057-6069 (2008), doi:[10.1021/jp0761665](https: doi.org/10.1021/jp0761665) Parameters      trajs : StateTraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtime : int Lagtimes for estimating the markov model given in [frames]. tmax : int Longest time to evaluate the CK equation given in [frames]. Returns    - bhtest : dict Dictionary holding for each lagtime the ckequation and with 'md' the reference.",
 "func":1
 }
