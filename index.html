@@ -31,11 +31,11 @@
 <img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/python/github/moldyn/msmhelper?label=code%20quality&amp;logo=lgtm">
 <img alt="wemake-python-styleguide" src="https://img.shields.io/badge/style-wemake-000000.svg"></p>
 <h1 id="msmhelper">msmhelper</h1>
-<p>This is a package with helper functions to work with state trajectories. Hence, it is mainly used for Markov State Models.</p>
+<p>This is a package with helper functions to work with discrete state trajectories and Markov state models. In contrast to <code>pyemma</code> and <code>msmbuilder</code> it features a very limited set of functionality. But using <code>numba</code>, it offers a solid performance and having many raise condition it enforces the correct usage.</p>
 <h1 id="usage">Usage</h1>
-<p>This package is mainly based on numpy and numba.</p>
+<p>This package is mainly based on <code>numpy</code> and <code>numba</code> for all computational complex tasks.</p>
 <h2 id="usage_1">Usage</h2>
-<pre><code class="language-python">import msmhelper
+<pre><code class="language-python">import msmhelper as mh
 ...
 </code></pre>
 <h2 id="known-bugs">Known Bugs</h2>
@@ -44,14 +44,20 @@
 </ul>
 <h2 id="requirements">Requirements:</h2>
 <ul>
-<li>Python 3.6-3.8</li>
+<li>Python 3.6-3.9</li>
 <li>Numba 0.49.0+</li>
 <li>Numpy 1.16.2+</li>
-<li>Pyemma 2.5.7+</li>
 </ul>
 <h1 id="changelog">Changelog:</h1>
 <ul>
 <li>tba:</li>
+<li>Remove <code>pyemma</code> to ensure better pip support</li>
+<li>Remove <code>build_MSM</code> use instead <code>estimate_markov_model</code></li>
+<li>Add new function <code>ergodic_mask</code></li>
+<li>Parallelize and refactor <code>compare_discretization</code></li>
+<li>Fix deprecated warnings of <code>numpy</code> and <code>pytest</code></li>
+<li>replaced decorators with <code>decorit</code> package</li>
+<li>Add gh-pages</li>
 <li>v0.5:</li>
 <li>Add <code>LumpedStateTraj</code> class which allows optimal projection of microstate dynamics to macrostates, method taken from Szabo and Hummer</li>
 <li>Add estimation of MD waiting times</li>
