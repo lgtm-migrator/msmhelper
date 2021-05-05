@@ -37,34 +37,6 @@ Georg Diez</p>
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt id="msmhelper.msm.build_MSM"><code class="name flex">
-<span>def <span class="ident">build_MSM</span></span>(<span>trajs, lagtime, reversible=False, **kwargs)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Wrapps pyemma.msm.estimate_markov_model.</p>
-<p>Based on the choice of reversibility it either calls pyemma for a
-reversible matrix or it creates a transition count matrix.</p>
-<h2 id="parameters">Parameters</h2>
-<dl>
-<dt><strong><code>trajs</code></strong> :&ensp;<code>list</code> or <code>ndarray</code> or <code>list</code> of <code>ndarray</code></dt>
-<dd>State trajectory/trajectories. The states should start from zero and
-need to be integers.</dd>
-<dt><strong><code>lagtime</code></strong> :&ensp;<code>int</code></dt>
-<dd>Lag time for estimating the markov model given in [frames].</dd>
-<dt><strong><code>reversible</code></strong> :&ensp;<code>bool</code>, optional</dt>
-<dd>If <code>True</code> it will uses pyemma.msm.estimate_markov_model which does not
-guarantee that the matrix is of full dimension. In case of <code>False</code> or
-if not statedm the local function based on a simple transitition count
-matrix will be used instead.</dd>
-<dt><strong><code>kwargs</code></strong></dt>
-<dd>For passing values to <code>pyemma.msm.estimate_markov_model</code>.</dd>
-</dl>
-<h2 id="returns">Returns</h2>
-<dl>
-<dt><strong><code>transmat</code></strong> :&ensp;<code>ndarray</code></dt>
-<dd>Transition rate matrix.</dd>
-</dl></div>
-</dd>
 <dt id="msmhelper.msm.equilibrium_population"><code class="name flex">
 <span>def <span class="ident">equilibrium_population</span></span>(<span>tmat)</span>
 </code></dt>
@@ -119,7 +91,8 @@ need to be integers.</dd>
 <dd>State trajectory/trajectories. The states should start from zero and
 need to be integers.</dd>
 <dt><strong><code>lagtimes</code></strong> :&ensp;<code>list</code> or <code>ndarray int</code></dt>
-<dd>Lagtimes for estimating the markov model given in [frames].</dd>
+<dd>Lagtimes for estimating the markov model given in [frames].
+This is not implemented yet!</dd>
 <dt><strong><code>reversible</code></strong> :&ensp;<code>bool</code></dt>
 <dd>If reversibility should be enforced for the markov state model.</dd>
 </dl>
@@ -199,7 +172,6 @@ setTimeout(() => input.focus(), 100);
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
-<li><code><a title="msmhelper.msm.build_MSM" href="#msmhelper.msm.build_MSM">build_MSM</a></code></li>
 <li><code><a title="msmhelper.msm.equilibrium_population" href="#msmhelper.msm.equilibrium_population">equilibrium_population</a></code></li>
 <li><code><a title="msmhelper.msm.estimate_markov_model" href="#msmhelper.msm.estimate_markov_model">estimate_markov_model</a></code></li>
 <li><code><a title="msmhelper.msm.implied_timescales" href="#msmhelper.msm.implied_timescales">implied_timescales</a></code></li>

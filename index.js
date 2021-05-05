@@ -298,12 +298,6 @@ INDEX=[
 "doc":"Create Markov State Model. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved. Authors: Daniel Nagel Georg Diez"
 },
 {
-"ref":"msmhelper.msm.build_MSM",
-"url":6,
-"doc":"Wrapps pyemma.msm.estimate_markov_model. Based on the choice of reversibility it either calls pyemma for a reversible matrix or it creates a transition count matrix. Parameters      trajs : list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtime : int Lag time for estimating the markov model given in [frames]. reversible : bool, optional If  True it will uses pyemma.msm.estimate_markov_model which does not guarantee that the matrix is of full dimension. In case of  False or if not statedm the local function based on a simple transitition count matrix will be used instead. kwargs For passing values to  pyemma.msm.estimate_markov_model . Returns    - transmat : ndarray Transition rate matrix.",
-"func":1
-},
-{
 "ref":"msmhelper.msm.estimate_markov_model",
 "url":6,
 "doc":"Estimates Markov State Model. This method estimates the MSM based on the transition count matrix. Parameters      trajs : statetraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtime : int Lag time for estimating the markov model given in [frames]. Returns    - T : ndarray Transition rate matrix. permutation : ndarray Array with corresponding states.",
@@ -312,7 +306,7 @@ INDEX=[
 {
 "ref":"msmhelper.msm.implied_timescales",
 "url":6,
-"doc":"Calculate the implied timescales. Calculate the implied timescales for the given values.  todo catch if for higher lagtimes the dimensionality changes Parameters      trajs : StateTraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtimes : list or ndarray int Lagtimes for estimating the markov model given in [frames]. reversible : bool If reversibility should be enforced for the markov state model. Returns    - T : ndarray Transition rate matrix.",
+"doc":"Calculate the implied timescales. Calculate the implied timescales for the given values.  todo catch if for higher lagtimes the dimensionality changes Parameters      trajs : StateTraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtimes : list or ndarray int Lagtimes for estimating the markov model given in [frames]. This is not implemented yet! reversible : bool If reversibility should be enforced for the markov state model. Returns    - T : ndarray Transition rate matrix.",
 "func":1
 },
 {
