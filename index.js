@@ -304,6 +304,12 @@ INDEX=[
 "func":1
 },
 {
+"ref":"msmhelper.msm.row_normalize_matrix",
+"url":6,
+"doc":"Row normalize the given 2d matrix. Parameters      mat : ndarray Matrix to be row normalized. Returns    - mat : ndarray Normalized matrix.",
+"func":1
+},
+{
 "ref":"msmhelper.msm.implied_timescales",
 "url":6,
 "doc":"Calculate the implied timescales. Calculate the implied timescales for the given values.  todo catch if for higher lagtimes the dimensionality changes Parameters      trajs : StateTraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtimes : list or ndarray int Lagtimes for estimating the markov model given in [frames]. This is not implemented yet! reversible : bool If reversibility should be enforced for the markov state model. Returns    - T : ndarray Transition rate matrix.",
@@ -318,7 +324,7 @@ INDEX=[
 {
 "ref":"msmhelper.msm.equilibrium_population",
 "url":6,
-"doc":"Calculate equilibirum population. Parameters      tmat : ndarray Quadratic transition matrix, needs to be ergodic. Returns    - peq : ndarray Equilibrium population of input matrix.",
+"doc":"Calculate equilibirum population. If there are non ergodic states, their population is set to zero. Parameters      tmat : ndarray Quadratic transition matrix, needs to be ergodic. allow_non_ergodic : bool If True only the largest ergodic subset will be used. Otherwise it will throw an error if not ergodic. Returns    - peq : ndarray Equilibrium population of input matrix.",
 "func":1
 },
 {

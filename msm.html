@@ -38,14 +38,18 @@ Georg Diez</p>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="msmhelper.msm.equilibrium_population"><code class="name flex">
-<span>def <span class="ident">equilibrium_population</span></span>(<span>tmat)</span>
+<span>def <span class="ident">equilibrium_population</span></span>(<span>tmat, allow_non_ergodic=True)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Calculate equilibirum population.</p>
+<p>If there are non ergodic states, their population is set to zero.</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
 <dt><strong><code>tmat</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Quadratic transition matrix, needs to be ergodic.</dd>
+<dt><strong><code>allow_non_ergodic</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True only the largest ergodic subset will be used. Otherwise it will
+throw an error if not ergodic.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -103,10 +107,26 @@ This is not implemented yet!</dd>
 </dl></div>
 </dd>
 <dt id="msmhelper.msm.peq"><code class="name flex">
-<span>def <span class="ident">peq</span></span>(<span>tmat)</span>
+<span>def <span class="ident">peq</span></span>(<span>tmat, allow_non_ergodic=True)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>This function is an alias of <code><a title="msmhelper.msm.equilibrium_population" href="#msmhelper.msm.equilibrium_population">equilibrium_population()</a></code>.See its docstring for further help.</p></div>
+</dd>
+<dt id="msmhelper.msm.row_normalize_matrix"><code class="name flex">
+<span>def <span class="ident">row_normalize_matrix</span></span>(<span>mat)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Row normalize the given 2d matrix.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>mat</code></strong> :&ensp;<code>ndarray</code></dt>
+<dd>Matrix to be row normalized.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>mat</code></strong> :&ensp;<code>ndarray</code></dt>
+<dd>Normalized matrix.</dd>
+</dl></div>
 </dd>
 </dl>
 </section>
@@ -176,6 +196,7 @@ setTimeout(() => input.focus(), 100);
 <li><code><a title="msmhelper.msm.estimate_markov_model" href="#msmhelper.msm.estimate_markov_model">estimate_markov_model</a></code></li>
 <li><code><a title="msmhelper.msm.implied_timescales" href="#msmhelper.msm.implied_timescales">implied_timescales</a></code></li>
 <li><code><a title="msmhelper.msm.peq" href="#msmhelper.msm.peq">peq</a></code></li>
+<li><code><a title="msmhelper.msm.row_normalize_matrix" href="#msmhelper.msm.row_normalize_matrix">row_normalize_matrix</a></code></li>
 </ul>
 </li>
 </ul>
