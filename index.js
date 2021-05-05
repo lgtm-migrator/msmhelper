@@ -441,19 +441,25 @@ INDEX=[
 {
 "ref":"msmhelper.tests.is_transition_matrix",
 "url":9,
-"doc":"Check if transition matrix. Rows and cols of zeros (non-visited states) are accepted. Parameters      matrix : ndarray Transition matrix. Returns    - is_tmat : bool",
+"doc":"Check if transition matrix. Rows and cols of zeros (non-visited states) are accepted. Parameters      matrix : ndarray Transition matrix. atol : float, optional Absolute tolerance. Returns    - is_tmat : bool",
 "func":1
 },
 {
 "ref":"msmhelper.tests.is_ergodic",
 "url":9,
-"doc":"Check if matrix is ergodic. Taken from: Wielandt, H. \"Unzerlegbare, Nicht Negativen Matrizen.\" Mathematische Zeitschrift. Vol. 52, 1950, pp. 642\u2013648. Parameters      matrix : ndarray Transition matrix. Returns    - is_ergodic : bool",
+"doc":"Check if matrix is ergodic. Taken from: Wielandt, H. \"Unzerlegbare, Nicht Negativen Matrizen.\" Mathematische Zeitschrift. Vol. 52, 1950, pp. 642\u2013648. Parameters      matrix : ndarray Transition matrix. atol : float, optional Absolute tolerance. Returns    - is_ergodic : bool",
 "func":1
 },
 {
 "ref":"msmhelper.tests.is_fuzzy_ergodic",
 "url":9,
-"doc":"Check if matrix is ergodic, up to missing states or trap states. Parameters      matrix : ndarray Transition matrix. Returns    - is_fuzzy_ergodic : bool",
+"doc":"Check if matrix is ergodic, up to missing states or trap states. If there are two or more disjoint Parameters      matrix : ndarray Transition matrix. atol : float, optional Absolute tolerance. Returns    - is_fuzzy_ergodic : bool",
+"func":1
+},
+{
+"ref":"msmhelper.tests.ergodic_mask",
+"url":9,
+"doc":"Create mask for filtering ergodic submatrix. Parameters      matrix : ndarray Transition matrix. atol : float, optional Absolute tolerance. Returns    - mask : bool ndarray",
 "func":1
 }
 ]

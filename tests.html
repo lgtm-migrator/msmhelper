@@ -35,8 +35,26 @@ All rights reserved.</p>
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
+<dt id="msmhelper.tests.ergodic_mask"><code class="name flex">
+<span>def <span class="ident">ergodic_mask</span></span>(<span>matrix, atol=1e-08)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create mask for filtering ergodic submatrix.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>matrix</code></strong> :&ensp;<code>ndarray</code></dt>
+<dd>Transition matrix.</dd>
+<dt><strong><code>atol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Absolute tolerance.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>mask</code></strong> :&ensp;<code>bool ndarray</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+</dd>
 <dt id="msmhelper.tests.is_ergodic"><code class="name flex">
-<span>def <span class="ident">is_ergodic</span></span>(<span>matrix)</span>
+<span>def <span class="ident">is_ergodic</span></span>(<span>matrix, atol=1e-08)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if matrix is ergodic.</p>
@@ -47,6 +65,8 @@ Mathematische Zeitschrift. Vol. 52, 1950, pp. 642–648.</p>
 <dl>
 <dt><strong><code>matrix</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Transition matrix.</dd>
+<dt><strong><code>atol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Absolute tolerance.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -55,14 +75,17 @@ Mathematische Zeitschrift. Vol. 52, 1950, pp. 642–648.</p>
 </dl></div>
 </dd>
 <dt id="msmhelper.tests.is_fuzzy_ergodic"><code class="name flex">
-<span>def <span class="ident">is_fuzzy_ergodic</span></span>(<span>matrix)</span>
+<span>def <span class="ident">is_fuzzy_ergodic</span></span>(<span>matrix, atol=1e-08)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if matrix is ergodic, up to missing states or trap states.</p>
+<p>If there are two or more disjoint</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
 <dt><strong><code>matrix</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Transition matrix.</dd>
+<dt><strong><code>atol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Absolute tolerance.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -119,13 +142,13 @@ Mathematische Zeitschrift. Vol. 52, 1950, pp. 642–648.</p>
 </dl></div>
 </dd>
 <dt id="msmhelper.tests.is_tmat"><code class="name flex">
-<span>def <span class="ident">is_tmat</span></span>(<span>matrix)</span>
+<span>def <span class="ident">is_tmat</span></span>(<span>matrix, atol=1e-08)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>This function is an alias of <code><a title="msmhelper.tests.is_transition_matrix" href="#msmhelper.tests.is_transition_matrix">is_transition_matrix()</a></code>.See its docstring for further help.</p></div>
 </dd>
 <dt id="msmhelper.tests.is_transition_matrix"><code class="name flex">
-<span>def <span class="ident">is_transition_matrix</span></span>(<span>matrix)</span>
+<span>def <span class="ident">is_transition_matrix</span></span>(<span>matrix, atol=1e-08)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Check if transition matrix.</p>
@@ -134,6 +157,8 @@ Mathematische Zeitschrift. Vol. 52, 1950, pp. 642–648.</p>
 <dl>
 <dt><strong><code>matrix</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Transition matrix.</dd>
+<dt><strong><code>atol</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Absolute tolerance.</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <dl>
@@ -205,6 +230,7 @@ setTimeout(() => input.focus(), 100);
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
+<li><code><a title="msmhelper.tests.ergodic_mask" href="#msmhelper.tests.ergodic_mask">ergodic_mask</a></code></li>
 <li><code><a title="msmhelper.tests.is_ergodic" href="#msmhelper.tests.is_ergodic">is_ergodic</a></code></li>
 <li><code><a title="msmhelper.tests.is_fuzzy_ergodic" href="#msmhelper.tests.is_fuzzy_ergodic">is_fuzzy_ergodic</a></code></li>
 <li><code><a title="msmhelper.tests.is_index_traj" href="#msmhelper.tests.is_index_traj">is_index_traj</a></code></li>
