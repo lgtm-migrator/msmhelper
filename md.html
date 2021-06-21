@@ -35,6 +35,40 @@ All rights reserved.</p>
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
+<dt id="msmhelper.md.estimate_msm_waiting_times"><code class="name flex">
+<span>def <span class="ident">estimate_msm_waiting_times</span></span>(<span>*, trajs, lagtime, start, final, steps)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Estimates waiting times between stated states.</p>
+<p>The stated states (from/to) will be treated as a basin. The function
+calculates all transitions from first entering the start-basin until first
+reaching the final-basin.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>trajs</code></strong> :&ensp;<code>statetraj</code> or <code>list</code> or <code>ndarray</code> or <code>list</code> of <code>ndarray</code></dt>
+<dd>State trajectory/trajectories. The states should start from zero and
+need to be integers.</dd>
+<dt><strong><code>lagtime</code></strong> :&ensp;<code>int</code></dt>
+<dd>Lag time for estimating the markov model given in [frames].</dd>
+<dt><strong><code>start</code></strong> :&ensp;<code>int</code> or <code>list of</code></dt>
+<dd>States to start counting.</dd>
+<dt><strong><code>final</code></strong> :&ensp;<code>int</code> or <code>list of</code></dt>
+<dd>States to start counting.</dd>
+<dt><strong><code>steps</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of MCMC propagation steps of MCMC run.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>wt</code></strong> :&ensp;<code>ndarray</code></dt>
+<dd>List of waiting times, given in frames.</dd>
+</dl></div>
+</dd>
+<dt id="msmhelper.md.estimate_msm_wt"><code class="name flex">
+<span>def <span class="ident">estimate_msm_wt</span></span>(<span>*, trajs, lagtime, start, final, steps)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This function is an alias of <code><a title="msmhelper.md.estimate_msm_waiting_times" href="#msmhelper.md.estimate_msm_waiting_times">estimate_msm_waiting_times()</a></code>.See its docstring for further help.</p></div>
+</dd>
 <dt id="msmhelper.md.estimate_paths"><code class="name flex">
 <span>def <span class="ident">estimate_paths</span></span>(<span>trajs, start, final)</span>
 </code></dt>
@@ -89,6 +123,29 @@ need to be integers.</dd>
 </code></dt>
 <dd>
 <div class="desc"><p>This function is an alias of <code><a title="msmhelper.md.estimate_waiting_times" href="#msmhelper.md.estimate_waiting_times">estimate_waiting_times()</a></code>.See its docstring for further help.</p></div>
+</dd>
+<dt id="msmhelper.md.propagate_MCMC"><code class="name flex">
+<span>def <span class="ident">propagate_MCMC</span></span>(<span>trajs, lagtime, steps, start=-1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Propagate MCMC trajectory.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>trajs</code></strong> :&ensp;<code>statetraj</code> or <code>list</code> or <code>ndarray</code> or <code>list</code> of <code>ndarray</code></dt>
+<dd>State trajectory/trajectories. The states should start from zero and
+need to be integers.</dd>
+<dt><strong><code>lagtime</code></strong> :&ensp;<code>int</code></dt>
+<dd>Lag time for estimating the markov model given in [frames].</dd>
+<dt><strong><code>steps</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of MCMC propagation steps.</dd>
+<dt><strong><code>start</code></strong> :&ensp;<code>int</code> or <code>list of</code>, optional</dt>
+<dd>State to start propagating. Default (-1) is random state.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>mcmc</code></strong> :&ensp;<code>ndarray</code></dt>
+<dd>MCMC trajecory.</dd>
+</dl></div>
 </dd>
 </dl>
 </section>
@@ -154,9 +211,12 @@ setTimeout(() => input.focus(), 100);
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
+<li><code><a title="msmhelper.md.estimate_msm_waiting_times" href="#msmhelper.md.estimate_msm_waiting_times">estimate_msm_waiting_times</a></code></li>
+<li><code><a title="msmhelper.md.estimate_msm_wt" href="#msmhelper.md.estimate_msm_wt">estimate_msm_wt</a></code></li>
 <li><code><a title="msmhelper.md.estimate_paths" href="#msmhelper.md.estimate_paths">estimate_paths</a></code></li>
 <li><code><a title="msmhelper.md.estimate_waiting_times" href="#msmhelper.md.estimate_waiting_times">estimate_waiting_times</a></code></li>
 <li><code><a title="msmhelper.md.estimate_wt" href="#msmhelper.md.estimate_wt">estimate_wt</a></code></li>
+<li><code><a title="msmhelper.md.propagate_MCMC" href="#msmhelper.md.propagate_MCMC">propagate_MCMC</a></code></li>
 </ul>
 </li>
 </ul>

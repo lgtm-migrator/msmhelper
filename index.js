@@ -240,6 +240,24 @@ INDEX=[
 "func":1
 },
 {
+"ref":"msmhelper.md.estimate_msm_wt",
+"url":5,
+"doc":"This function is an alias of  estimate_msm_waiting_times .See its docstring for further help.",
+"func":1
+},
+{
+"ref":"msmhelper.md.estimate_msm_waiting_times",
+"url":5,
+"doc":"Estimates waiting times between stated states. The stated states (from/to) will be treated as a basin. The function calculates all transitions from first entering the start-basin until first reaching the final-basin. Parameters      trajs : statetraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtime : int Lag time for estimating the markov model given in [frames]. start : int or list of States to start counting. final : int or list of States to start counting. steps : int Number of MCMC propagation steps of MCMC run. Returns    - wt : ndarray List of waiting times, given in frames.",
+"func":1
+},
+{
+"ref":"msmhelper.md.propagate_MCMC",
+"url":5,
+"doc":"Propagate MCMC trajectory. Parameters      trajs : statetraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtime : int Lag time for estimating the markov model given in [frames]. steps : int Number of MCMC propagation steps. start : int or list of, optional State to start propagating. Default (-1) is random state. Returns    - mcmc : ndarray MCMC trajecory.",
+"func":1
+},
+{
 "ref":"msmhelper.statetraj",
 "url":6,
 "doc":"Class for handling discrete state trajectories. BSD 3-Clause License Copyright (c) 2019-2020, Daniel Nagel All rights reserved."
