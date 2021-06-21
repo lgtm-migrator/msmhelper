@@ -164,6 +164,7 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <li><code><a title="msmhelper.statetraj.StateTraj.index_trajs" href="#msmhelper.statetraj.StateTraj.index_trajs">index_trajs</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.nframes" href="#msmhelper.statetraj.StateTraj.nframes">nframes</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.ntrajs" href="#msmhelper.statetraj.StateTraj.ntrajs">ntrajs</a></code></li>
+<li><code><a title="msmhelper.statetraj.StateTraj.state_to_idx" href="#msmhelper.statetraj.StateTraj.state_to_idx">state_to_idx</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.trajs" href="#msmhelper.statetraj.StateTraj.trajs">trajs</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.trajs_flatten" href="#msmhelper.statetraj.StateTraj.trajs_flatten">trajs_flatten</a></code></li>
 </ul>
@@ -293,6 +294,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dd>Array with corresponding states.</dd>
 </dl></div>
 </dd>
+<dt id="msmhelper.statetraj.StateTraj.state_to_idx"><code class="name flex">
+<span>def <span class="ident">state_to_idx</span></span>(<span>self, state)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get idx corresponding to state.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>state</code></strong> :&ensp;<code>int</code></dt>
+<dd>State to get idx of.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>idx</code></strong> :&ensp;<code>int</code></dt>
+<dd>Idx corresponding to state.</dd>
+</dl></div>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -379,6 +396,7 @@ setTimeout(() => input.focus(), 100);
 <li><code><a title="msmhelper.statetraj.StateTraj.nframes" href="#msmhelper.statetraj.StateTraj.nframes">nframes</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.nstates" href="#msmhelper.statetraj.StateTraj.nstates">nstates</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.ntrajs" href="#msmhelper.statetraj.StateTraj.ntrajs">ntrajs</a></code></li>
+<li><code><a title="msmhelper.statetraj.StateTraj.state_to_idx" href="#msmhelper.statetraj.StateTraj.state_to_idx">state_to_idx</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.state_trajs" href="#msmhelper.statetraj.StateTraj.state_trajs">state_trajs</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.state_trajs_flatten" href="#msmhelper.statetraj.StateTraj.state_trajs_flatten">state_trajs_flatten</a></code></li>
 <li><code><a title="msmhelper.statetraj.StateTraj.states" href="#msmhelper.statetraj.StateTraj.states">states</a></code></li>
