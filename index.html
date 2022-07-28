@@ -6,7 +6,7 @@
 <meta name="generator" content="pdoc 0.10.0" />
 <title>msmhelper API documentation</title>
 <meta name="description" content="![GitHub Workflow Status](https://img.shields.io/github/workflow/status/moldyn/msmhelper/Python%20package)
-![GitHub All …" />
+![GitHub last …" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css' rel='stylesheet'>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css" rel="stylesheet">
@@ -23,9 +23,7 @@
 </header>
 <section id="section-intro">
 <p><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/moldyn/msmhelper/Python%20package">
-<img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/moldyn/msmhelper/total">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/moldyn/msmhelper">
-<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/moldyn/msmhelper">
 <img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/python/github/moldyn/msmhelper?label=code%20quality&amp;logo=lgtm">
 <img alt="wemake-python-styleguide" src="https://img.shields.io/badge/style-wemake-000000.svg"></p>
 <h1 id="msmhelper">msmhelper</h1>
@@ -42,38 +40,11 @@
 <li>Numba 0.49.0+</li>
 <li>Numpy 1.16.2+</li>
 </ul>
-<h1 id="changelog">Changelog:</h1>
-<ul>
-<li>tba:</li>
-<li>Added <code>beartype</code> dependency for adding dynamic type checking</li>
-<li>Remove <code>pyemma</code> to ensure better pip support</li>
-<li>Remove <code>build_MSM</code> use instead <code>estimate_markov_model</code></li>
-<li>Add new function <code>ergodic_mask</code></li>
-<li>Parallelize and refactor <code>compare_discretization</code></li>
-<li>Fix deprecated warnings of <code>numpy</code> and <code>pytest</code></li>
-<li>replaced decorators with <code>decorit</code> package</li>
-<li>Add gh-pages</li>
-<li>Add module <code><a title="msmhelper.md" href="md.html">msmhelper.md</a></code> with functions for estimating timescales and pathways</li>
-<li>v0.5:</li>
-<li>Add <code>LumpedStateTraj</code> class which allows optimal projection of microstate dynamics to macrostates, method taken from Szabo and Hummer</li>
-<li>Add estimation of MD waiting times</li>
-<li>Minor improvements and tweaks.</li>
-<li>v0.4:</li>
-<li>Add <code><a title="msmhelper.compare" href="compare.html">msmhelper.compare</a></code> module to compare two different state discretizations</li>
-<li>Upgrade pydoc to <code>0.9.1</code> with search option and change css style.</li>
-<li>v0.3:</li>
-<li>Add <code>StateTraj</code> class to speed up calcualations by a factor of 50.</li>
-<li>Refactor code to use/be compatible with <code>StateTraj</code> class</li>
-<li>Add <code><a title="msmhelper.benchmark" href="benchmark.html">msmhelper.benchmark</a></code> module with an numba optimized version of the Chapman
-Kolmogorov test.</li>
-<li>v0.2:</li>
-<li>parts of msm module are rewritten in numba</li>
-<li>v0.1:</li>
-<li>initial release</li>
-</ul>
 <h1 id="roadmap">Roadmap:</h1>
 <ul>
-<li>write roadmap</li>
+<li>Add unit tests for all functions</li>
+<li>Add examples usage scripts</li>
+<li>Create typing module</li>
 </ul>
 <h1 id="development">Development</h1>
 <h2 id="additional-requirements">Additional Requirements:</h2>
@@ -166,7 +137,6 @@ __version__ = &#39;0.5.0&#39;</code></pre>
 <li><a href="#requirements">Requirements:</a></li>
 </ul>
 </li>
-<li><a href="#changelog">Changelog:</a></li>
 <li><a href="#roadmap">Roadmap:</a></li>
 <li><a href="#development">Development</a><ul>
 <li><a href="#additional-requirements">Additional Requirements:</a></li>
