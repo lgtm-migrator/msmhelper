@@ -6,15 +6,13 @@
 <meta name="generator" content="pdoc 0.10.0" />
 <title>msmhelper.md API documentation</title>
 <meta name="description" content="Set of functions for analyzing the MD trajectory …" />
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
-<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/atom-one-dark.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#282c34;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#282c34;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin:1em 0;padding:1ex}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver;margin-top:10px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML" integrity="sha256-kZafAc6mZvK3W3v1pHOcUix30OHQN6pU/NO2oFkqZVw=" crossorigin></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
-<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML'></script>
 </head>
 <body>
 <main>
@@ -27,6 +25,419 @@
 <p>BSD 3-Clause License
 Copyright (c) 2019-2020, Daniel Nagel
 All rights reserved.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+&#34;&#34;&#34;Set of functions for analyzing the MD trajectory.
+
+BSD 3-Clause License
+Copyright (c) 2019-2020, Daniel Nagel
+All rights reserved.
+
+&#34;&#34;&#34;
+import random
+from collections import defaultdict
+
+import decorit
+import numba
+import numpy as np
+
+from msmhelper.compare import _intersect as intersect
+from msmhelper.statetraj import StateTraj
+
+
+@decorit.alias(&#39;estimate_wt&#39;)
+def estimate_waiting_times(trajs, start, final):
+    &#34;&#34;&#34;Estimates waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+    start : int or list of
+        States to start counting.
+    final : int or list of
+        States to start counting.
+
+    Returns
+    -------
+    wt : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # do not convert for pytest coverage
+    if numba.config.DISABLE_JIT:
+        return _estimate_waiting_times(trajs, states_start, states_final)
+    return _estimate_waiting_times(  # pragma: no cover
+        numba.typed.List(trajs),
+        numba.typed.List(states_start),
+        numba.typed.List(states_final),
+    )
+
+
+@numba.njit
+def _estimate_waiting_times(trajs, states_start, states_final):
+    &#34;&#34;&#34;Estimate waiting time between subsets of states.&#34;&#34;&#34;
+    times = []
+    for traj in trajs:
+        times.extend(
+            _estimate_waiting_times_singletraj(
+                traj, states_start, states_final,
+            ),
+        )
+    return np.array(times)
+
+
+@numba.njit
+def _estimate_waiting_times_singletraj(traj, states_start, states_final):
+    &#34;&#34;&#34;Estimate waiting time between subsets of states for a single traj.&#34;&#34;&#34;
+    paths_idx = _estimate_events_singletraj(traj, states_start, states_final)
+    return [idx_end - idx_start for idx_start, idx_end in paths_idx]
+
+
+def estimate_paths(trajs, start, final):
+    &#34;&#34;&#34;Estimates paths and waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin. The results will be listed by the corresponding
+    pathways, where loops are removed occuring first.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+    start : int or list of
+        States to start counting.
+    final : int or list of
+        States to start counting.
+
+    Returns
+    -------
+    paths : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # do not convert for pytest coverage
+    if numba.config.DISABLE_JIT:  # pragma: no cover
+        path_tuples = _estimate_paths(trajs, states_start, states_final)
+    else:
+        path_tuples = _estimate_paths(  # pragma: no cover
+            numba.typed.List(trajs),
+            numba.typed.List(states_start),
+            numba.typed.List(states_final),
+        )
+    paths = defaultdict(list)
+    for path, time in path_tuples:
+        paths[tuple(path)].append(time)
+
+    return paths
+
+
+@numba.njit
+def _estimate_paths(trajs, states_start, states_final):
+    &#34;&#34;&#34;Estimate waiting time between subsets of states.&#34;&#34;&#34;
+    paths = []
+    for traj in trajs:
+        paths.extend(
+            _estimate_paths_singletraj(
+                traj, states_start, states_final,
+            ),
+        )
+    return paths
+
+
+@numba.njit
+def _estimate_events_singletraj(traj, states_start, states_final):
+    &#34;&#34;&#34;Estimate waiting time between subsets of states for a single traj.&#34;&#34;&#34;
+    paths_idx = []
+    propagates_forwards = False
+    idx_start = 0
+    for idx in range(len(traj)):  # noqa: WPS518
+        state = traj[idx]
+
+        if not propagates_forwards and state in states_start:
+            propagates_forwards = True
+            idx_start = idx
+        elif propagates_forwards and state in states_final:
+            propagates_forwards = False
+            paths_idx.append((idx_start, idx))
+
+    return paths_idx
+
+
+@numba.njit
+def _estimate_paths_singletraj(traj, states_start, states_final):
+    &#34;&#34;&#34;Estimate waiting time between subsets of states for a single traj.&#34;&#34;&#34;
+    paths_idx = _estimate_events_singletraj(traj, states_start, states_final)
+
+    paths = []
+    for idx_start, idx_end in paths_idx:
+        for state in traj[idx_start: idx_end + 1]:  # noqa: WPS518
+            if state in states_start:
+                path = [int(define_type_var) for define_type_var in range(0)]
+            elif state in path:
+                path = path[: path.index(state)]
+            path.append(state)
+
+        paths.append((path, idx_end - idx_start))
+    return paths
+
+
+@decorit.alias(&#39;estimate_msm_wt&#39;)
+def estimate_msm_waiting_times(
+    *,
+    trajs,
+    lagtime,
+    start,
+    final,
+    steps,
+    return_list=False,
+):
+    &#34;&#34;&#34;Estimates waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+
+    lagtime : int
+        Lag time for estimating the markov model given in [frames].
+
+    start : int or list of
+        States to start counting.
+
+    final : int or list of
+        States to start counting.
+
+    steps : int
+        Number of MCMC propagation steps of MCMC run.
+
+    return_list : bool
+        If true a list of all events is returned, else a dictionary is
+        returned.
+
+    Returns
+    -------
+    wt : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # convert states to idx
+    idxs_start = np.array(
+        [trajs.state_to_idx(state) for state in states_start],
+    )
+    idxs_final = np.array(
+        [trajs.state_to_idx(state) for state in states_final],
+    )
+    start = np.random.choice(idxs_final)
+
+    # do not convert for pytest coverage
+    if not numba.config.DISABLE_JIT:
+        idxs_start = numba.typed.List(idxs_start)
+        idxs_final = numba.typed.List(idxs_final)
+
+    # estimate cummulative transition matrix
+    cummat = _get_cummat(trajs=trajs, lagtime=lagtime)
+
+    wts = _estimate_msm_waiting_times(
+        cummat=cummat,
+        start=start,
+        states_from=idxs_start,
+        states_to=idxs_final,
+        steps=steps,
+    )
+    # multiply wts by lagtime
+    if return_list:
+        return np.repeat(
+            list(wts.keys()), list(wts.values()),
+        ) * lagtime
+    return {wt * lagtime: count for wt, count in wts.items()}
+
+
+@numba.njit
+def _propagate_MCMC_step(cummat, idx_from):
+    &#34;&#34;&#34;Propagate a single step Markov chain Monte Carlo.&#34;&#34;&#34;
+    rand = random.random()  # noqa: S311
+    cummat_perm, state_perm = cummat
+    cummat_perm, state_perm = cummat_perm[idx_from], state_perm[idx_from]
+
+    for idx, cummat_idx in enumerate(cummat_perm):
+        # strict less to ensure that rand=0 does not jump along unconnected
+        # states with Tij=0.
+        if rand &lt; cummat_idx:
+            return state_perm[idx]
+    # this should never be reached, but needed for numba to ensure int return
+    return len(cummat_perm) - 1
+
+
+@numba.njit
+def _estimate_msm_waiting_times(
+    cummat, start, states_from, states_to, steps,
+):
+    wts = {}
+
+    idx_start = 0
+    propagates_forwards = False
+    state = start
+    for idx in range(steps):
+        state = _propagate_MCMC_step(cummat=cummat, idx_from=state)
+
+        if not propagates_forwards and state in states_from:
+            propagates_forwards = True
+            idx_start = idx
+        elif propagates_forwards and state in states_to:
+            propagates_forwards = False
+            wt = idx - idx_start
+            if wt in wts:
+                wts[wt] += 1
+            else:
+                wts[wt] = 1
+
+    return wts
+
+
+def propagate_MCMC(
+    trajs,
+    lagtime,
+    steps,
+    start=-1,
+):
+    &#34;&#34;&#34;Propagate MCMC trajectory.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+
+    lagtime : int
+        Lag time for estimating the markov model given in [frames].
+
+    steps : int
+        Number of MCMC propagation steps.
+
+    start : int or list of, optional
+        State to start propagating. Default (-1) is random state.
+
+    Returns
+    -------
+    mcmc : ndarray
+        MCMC trajecory.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    # check that all states exist in trajectory
+    if start == -1:
+        start = np.random.choice(trajs.states)
+    elif start not in trajs.states:
+        raise ValueError(
+            &#39;Selected starting state does not exist in state trajectoty.&#39;,
+        )
+
+    # convert states to idx
+    idx_start = trajs.state_to_idx(start)
+
+    # estimate permuted cummulative transition matrix
+    cummat = _get_cummat(trajs=trajs, lagtime=lagtime)
+
+    # do not convert for pytest coverage
+    return _propagate_MCMC(  # pragma: no cover
+        cummat=cummat,
+        start=idx_start,
+        steps=steps,
+    )
+
+
+@numba.njit
+def _propagate_MCMC(cummat, start, steps):
+    mcmc = np.empty(steps, dtype=np.int32)
+
+    state = start
+    mcmc[0] = state
+    for idx in range(steps - 1):
+        state = _propagate_MCMC_step(cummat=cummat, idx_from=state)
+        mcmc[idx + 1] = state
+
+    return mcmc
+
+
+def _get_cummat(trajs, lagtime):
+    # estimate cummulative transition matrix
+    msm, _ = StateTraj(trajs).estimate_markov_model(lagtime)
+
+    cummat_perm = np.empty_like(msm)
+    state_perm = np.empty_like(msm, dtype=np.int64)
+
+    for idx, row in enumerate(msm):
+        idx_sort = np.argsort(row)[::-1]
+
+        cummat_perm[idx] = np.cumsum(row[idx_sort])
+        state_perm[idx] = idx_sort
+
+    cummat_perm[:, -1] = 1  # enforce that probability sums up to 1
+    return cummat_perm, state_perm</code></pre>
+</details>
 </section>
 <section>
 </section>
@@ -65,12 +476,200 @@ returned.</dd>
 <dt><strong><code>wt</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>List of waiting times, given in frames.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@decorit.alias(&#39;estimate_msm_wt&#39;)
+def estimate_msm_waiting_times(
+    *,
+    trajs,
+    lagtime,
+    start,
+    final,
+    steps,
+    return_list=False,
+):
+    &#34;&#34;&#34;Estimates waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+
+    lagtime : int
+        Lag time for estimating the markov model given in [frames].
+
+    start : int or list of
+        States to start counting.
+
+    final : int or list of
+        States to start counting.
+
+    steps : int
+        Number of MCMC propagation steps of MCMC run.
+
+    return_list : bool
+        If true a list of all events is returned, else a dictionary is
+        returned.
+
+    Returns
+    -------
+    wt : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # convert states to idx
+    idxs_start = np.array(
+        [trajs.state_to_idx(state) for state in states_start],
+    )
+    idxs_final = np.array(
+        [trajs.state_to_idx(state) for state in states_final],
+    )
+    start = np.random.choice(idxs_final)
+
+    # do not convert for pytest coverage
+    if not numba.config.DISABLE_JIT:
+        idxs_start = numba.typed.List(idxs_start)
+        idxs_final = numba.typed.List(idxs_final)
+
+    # estimate cummulative transition matrix
+    cummat = _get_cummat(trajs=trajs, lagtime=lagtime)
+
+    wts = _estimate_msm_waiting_times(
+        cummat=cummat,
+        start=start,
+        states_from=idxs_start,
+        states_to=idxs_final,
+        steps=steps,
+    )
+    # multiply wts by lagtime
+    if return_list:
+        return np.repeat(
+            list(wts.keys()), list(wts.values()),
+        ) * lagtime
+    return {wt * lagtime: count for wt, count in wts.items()}</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.md.estimate_msm_wt"><code class="name flex">
 <span>def <span class="ident">estimate_msm_wt</span></span>(<span>*, trajs, lagtime, start, final, steps, return_list=False)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>This function is an alias of <code><a title="msmhelper.md.estimate_msm_waiting_times" href="#msmhelper.md.estimate_msm_waiting_times">estimate_msm_waiting_times()</a></code>.See its docstring for further help.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@decorit.alias(&#39;estimate_msm_wt&#39;)
+def estimate_msm_waiting_times(
+    *,
+    trajs,
+    lagtime,
+    start,
+    final,
+    steps,
+    return_list=False,
+):
+    &#34;&#34;&#34;Estimates waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+
+    lagtime : int
+        Lag time for estimating the markov model given in [frames].
+
+    start : int or list of
+        States to start counting.
+
+    final : int or list of
+        States to start counting.
+
+    steps : int
+        Number of MCMC propagation steps of MCMC run.
+
+    return_list : bool
+        If true a list of all events is returned, else a dictionary is
+        returned.
+
+    Returns
+    -------
+    wt : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # convert states to idx
+    idxs_start = np.array(
+        [trajs.state_to_idx(state) for state in states_start],
+    )
+    idxs_final = np.array(
+        [trajs.state_to_idx(state) for state in states_final],
+    )
+    start = np.random.choice(idxs_final)
+
+    # do not convert for pytest coverage
+    if not numba.config.DISABLE_JIT:
+        idxs_start = numba.typed.List(idxs_start)
+        idxs_final = numba.typed.List(idxs_final)
+
+    # estimate cummulative transition matrix
+    cummat = _get_cummat(trajs=trajs, lagtime=lagtime)
+
+    wts = _estimate_msm_waiting_times(
+        cummat=cummat,
+        start=start,
+        states_from=idxs_start,
+        states_to=idxs_final,
+        steps=steps,
+    )
+    # multiply wts by lagtime
+    if return_list:
+        return np.repeat(
+            list(wts.keys()), list(wts.values()),
+        ) * lagtime
+    return {wt * lagtime: count for wt, count in wts.items()}</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.md.estimate_paths"><code class="name flex">
 <span>def <span class="ident">estimate_paths</span></span>(<span>trajs, start, final)</span>
@@ -96,6 +695,64 @@ need to be integers.</dd>
 <dt><strong><code>paths</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>List of waiting times, given in frames.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def estimate_paths(trajs, start, final):
+    &#34;&#34;&#34;Estimates paths and waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin. The results will be listed by the corresponding
+    pathways, where loops are removed occuring first.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+    start : int or list of
+        States to start counting.
+    final : int or list of
+        States to start counting.
+
+    Returns
+    -------
+    paths : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # do not convert for pytest coverage
+    if numba.config.DISABLE_JIT:  # pragma: no cover
+        path_tuples = _estimate_paths(trajs, states_start, states_final)
+    else:
+        path_tuples = _estimate_paths(  # pragma: no cover
+            numba.typed.List(trajs),
+            numba.typed.List(states_start),
+            numba.typed.List(states_final),
+        )
+    paths = defaultdict(list)
+    for path, time in path_tuples:
+        paths[tuple(path)].append(time)
+
+    return paths</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.md.estimate_waiting_times"><code class="name flex">
 <span>def <span class="ident">estimate_waiting_times</span></span>(<span>trajs, start, final)</span>
@@ -120,12 +777,116 @@ need to be integers.</dd>
 <dt><strong><code>wt</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>List of waiting times, given in frames.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@decorit.alias(&#39;estimate_wt&#39;)
+def estimate_waiting_times(trajs, start, final):
+    &#34;&#34;&#34;Estimates waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+    start : int or list of
+        States to start counting.
+    final : int or list of
+        States to start counting.
+
+    Returns
+    -------
+    wt : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # do not convert for pytest coverage
+    if numba.config.DISABLE_JIT:
+        return _estimate_waiting_times(trajs, states_start, states_final)
+    return _estimate_waiting_times(  # pragma: no cover
+        numba.typed.List(trajs),
+        numba.typed.List(states_start),
+        numba.typed.List(states_final),
+    )</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.md.estimate_wt"><code class="name flex">
 <span>def <span class="ident">estimate_wt</span></span>(<span>trajs, start, final)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>This function is an alias of <code><a title="msmhelper.md.estimate_waiting_times" href="#msmhelper.md.estimate_waiting_times">estimate_waiting_times()</a></code>.See its docstring for further help.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@decorit.alias(&#39;estimate_wt&#39;)
+def estimate_waiting_times(trajs, start, final):
+    &#34;&#34;&#34;Estimates waiting times between stated states.
+
+    The stated states (from/to) will be treated as a basin. The function
+    calculates all transitions from first entering the start-basin until first
+    reaching the final-basin.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+    start : int or list of
+        States to start counting.
+    final : int or list of
+        States to start counting.
+
+    Returns
+    -------
+    wt : ndarray
+        List of waiting times, given in frames.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    states_start, states_final = np.unique(start), np.unique(final)
+
+    if intersect(states_start, states_final):
+        raise ValueError(&#39;States `start` and `final` do overlap.&#39;)
+
+    # check that all states exist in trajectory
+    for states in (states_start, states_final):
+        if intersect(states, trajs.states) != len(states):
+            raise ValueError(
+                &#39;Selected states does not exist in state trajectoty.&#39;,
+            )
+
+    # do not convert for pytest coverage
+    if numba.config.DISABLE_JIT:
+        return _estimate_waiting_times(trajs, states_start, states_final)
+    return _estimate_waiting_times(  # pragma: no cover
+        numba.typed.List(trajs),
+        numba.typed.List(states_start),
+        numba.typed.List(states_final),
+    )</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.md.propagate_MCMC"><code class="name flex">
 <span>def <span class="ident">propagate_MCMC</span></span>(<span>trajs, lagtime, steps, start=-1)</span>
@@ -149,6 +910,63 @@ need to be integers.</dd>
 <dt><strong><code>mcmc</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>MCMC trajecory.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def propagate_MCMC(
+    trajs,
+    lagtime,
+    steps,
+    start=-1,
+):
+    &#34;&#34;&#34;Propagate MCMC trajectory.
+
+    Parameters
+    ----------
+    trajs : statetraj or list or ndarray or list of ndarray
+        State trajectory/trajectories. The states should start from zero and
+        need to be integers.
+
+    lagtime : int
+        Lag time for estimating the markov model given in [frames].
+
+    steps : int
+        Number of MCMC propagation steps.
+
+    start : int or list of, optional
+        State to start propagating. Default (-1) is random state.
+
+    Returns
+    -------
+    mcmc : ndarray
+        MCMC trajecory.
+
+    &#34;&#34;&#34;
+    # check correct input format
+    trajs = StateTraj(trajs)
+
+    # check that all states exist in trajectory
+    if start == -1:
+        start = np.random.choice(trajs.states)
+    elif start not in trajs.states:
+        raise ValueError(
+            &#39;Selected starting state does not exist in state trajectoty.&#39;,
+        )
+
+    # convert states to idx
+    idx_start = trajs.state_to_idx(start)
+
+    # estimate permuted cummulative transition matrix
+    cummat = _get_cummat(trajs=trajs, lagtime=lagtime)
+
+    # do not convert for pytest coverage
+    return _propagate_MCMC(  # pragma: no cover
+        cummat=cummat,
+        start=idx_start,
+        steps=steps,
+    )</code></pre>
+</details>
 </dd>
 </dl>
 </section>
@@ -156,52 +974,6 @@ need to be integers.</dd>
 </section>
 </article>
 <nav id="sidebar">
-<form>
-<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
-disabled minlength="2">
-</form>
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.3/tingle.min.css" integrity="sha512-j1u8eUJ4f23xPPxwOrLUPQaCD2dwzNqqmDDcWS4deWsMv2ohLqmXXuP3hU7g8TyzbMSakP/mMqoNBYWj8AEIFg==" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.3/tingle.min.js" integrity="sha512-plGUER9JkeEWPPqQBE4sdLqBoQug5Ap+BCGMc7bJ8BXkm+VVj6QzkpBz5Yv2yPkkq+cqg9IpkBaGCas6uDbW8g==" crossorigin></script>
-<style>
-.modal-dialog iframe {
-width: 100vw;
-height: calc(100vh - 80px);
-}
-@media screen and (min-width: 700px) {
-.modal-dialog iframe {
-width: 70vw;
-height: 80vh;
-}
-}
-.modal-dialog .tingle-modal-box {width: auto;}
-.modal-dialog .tingle-modal-box__content {padding: 0;}
-</style>
-<script>
-const input = document.getElementById('lunr-search');
-input.disabled = false;
-input.form.addEventListener('submit', (ev) => {
-ev.preventDefault();
-const url = new URL(window.location);
-url.searchParams.set('q', input.value);
-history.replaceState({}, null, url.toString());
-search(input.value);
-});
-const query = new URL(window.location).searchParams.get('q');
-if (query)
-search(query);
-function search(query) {
-const url = '../doc-search.html#' + encodeURIComponent(query);
-new tingle.modal({
-cssClass: ['modal-dialog'],
-onClose: () => {
-const url = new URL(window.location);
-url.searchParams.delete('q');
-history.replaceState({}, null, url.toString());
-setTimeout(() => input.focus(), 100);
-}
-}).setContent('<iframe src="' + url + '"></iframe>').open();
-}
-</script>
 <h1>Index</h1>
 <div class="toc">
 <ul></ul>
@@ -234,7 +1006,9 @@ setTimeout(() => input.focus(), 100);
 </svg>
 </a>
 <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
 </body>
 </html>

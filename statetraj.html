@@ -6,15 +6,13 @@
 <meta name="generator" content="pdoc 0.10.0" />
 <title>msmhelper.statetraj API documentation</title>
 <meta name="description" content="Class for handling discrete state trajectories …" />
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
-<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/atom-one-dark.min.css" crossorigin>
-<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#282c34;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#282c34;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin:1em 0;padding:1ex}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver;margin-top:10px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
 <style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
 <style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML" integrity="sha256-kZafAc6mZvK3W3v1pHOcUix30OHQN6pU/NO2oFkqZVw=" crossorigin></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
-<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML'></script>
 </head>
 <body>
 <main>
@@ -27,6 +25,557 @@
 <p>BSD 3-Clause License
 Copyright (c) 2019-2020, Daniel Nagel
 All rights reserved.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+&#34;&#34;&#34;Class for handling discrete state trajectories.
+
+BSD 3-Clause License
+Copyright (c) 2019-2020, Daniel Nagel
+All rights reserved.
+
+&#34;&#34;&#34;
+import numpy as np
+
+import msmhelper as mh
+from msmhelper import tests, tools
+
+
+class StateTraj:  # noqa: WPS214
+    &#34;&#34;&#34;Class for handling discrete state trajectories.&#34;&#34;&#34;
+
+    # noqa: E800 # add slots magic,  self.__slots__ = (&#39;_states&#39;, &#39;_trajs&#39;).
+    def __new__(cls, trajs):
+        &#34;&#34;&#34;Initialize new instance.
+
+        If called with instance, return instance instead.
+
+        &#34;&#34;&#34;
+        if isinstance(trajs, StateTraj):
+            return trajs
+        return super().__new__(cls)
+
+    def __init__(self, trajs):
+        &#34;&#34;&#34;Initialize StateTraj and convert to index trajectories.
+
+        If called with StateTraj instance, it will be retuned instead.
+
+        Parameters
+        ----------
+        trajs : list or ndarray or list of ndarray
+            State trajectory/trajectories. The states need to be integers.
+
+        &#34;&#34;&#34;
+        if isinstance(trajs, StateTraj):
+            return
+
+        self.state_trajs = trajs
+
+    @property
+    def states(self):
+        &#34;&#34;&#34;Return active set of states.
+
+        Returns
+        -------
+        states : ndarray
+            Numpy array holding active set of states.
+
+        &#34;&#34;&#34;
+        return self._states
+
+    @property
+    def nstates(self):
+        &#34;&#34;&#34;Return number of states.
+
+        Returns
+        -------
+        nstates : int
+            Number of states.
+
+        &#34;&#34;&#34;
+        return len(self.states)
+
+    @property
+    def ntrajs(self):
+        &#34;&#34;&#34;Return number of trajectories.
+
+        Returns
+        -------
+        ntrajs : int
+            Number of trajectories.
+
+        &#34;&#34;&#34;
+        return len(self)
+
+    @property
+    def nframes(self):
+        &#34;&#34;&#34;Return cummulated length of all trajectories.
+
+        Returns
+        -------
+        nframes : int
+            Number of frames of all trajectories.
+
+        &#34;&#34;&#34;
+        return self._nframes
+
+    @property
+    def state_trajs(self):
+        &#34;&#34;&#34;Return state trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        if np.array_equal(self.states, np.arange(self.nstates)):
+            return self.trajs
+        return tools.shift_data(
+            self.trajs,
+            np.arange(self.nstates),
+            self.states,
+        )
+
+    @state_trajs.setter
+    def state_trajs(self, trajs):
+        &#34;&#34;&#34;Set the state trajectory.
+
+        Parameters
+        ----------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        self._trajs = tools.format_state_traj(trajs)
+
+        # get number of states
+        self._states = tools.unique(self._trajs)
+
+        # shift to indices
+        if not np.array_equal(self._states, np.arange(self.nstates)):
+            self._trajs, self._states = tools.rename_by_index(  # noqa: WPS414
+                self._trajs,
+                return_permutation=True,
+            )
+
+        # set number of frames
+        self._nframes = np.sum([len(traj) for traj in self.trajs])
+
+    @property
+    def state_trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened state trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of state trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self.state_trajs)
+
+    @property
+    def index_trajs(self):
+        &#34;&#34;&#34;Return index trajectory.
+
+        Same as `self.trajs`
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        return self.trajs
+
+    @property
+    def trajs(self):
+        &#34;&#34;&#34;Return index trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        return self._trajs
+
+    @property
+    def trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened index trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of index trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self._trajs)
+
+    def __repr__(self):
+        &#34;&#34;&#34;Return representation of class.&#34;&#34;&#34;
+        kw = {
+            &#39;clname&#39;: self.__class__.__name__,
+            &#39;trajs&#39;: self.state_trajs,
+        }
+        return (&#39;{clname}({trajs})&#39;.format(**kw))
+
+    def __str__(self):
+        &#34;&#34;&#34;Return string representation of class.&#34;&#34;&#34;
+        return (&#39;{trajs!s}&#39;.format(trajs=self.state_trajs))
+
+    def __iter__(self):
+        &#34;&#34;&#34;Iterate over trajectories.&#34;&#34;&#34;
+        return iter(self.state_trajs)
+
+    def __len__(self):
+        &#34;&#34;&#34;Return length of list of trajectories.&#34;&#34;&#34;
+        return len(self.trajs)
+
+    def __getitem__(self, key):
+        &#34;&#34;&#34;Get key value.&#34;&#34;&#34;
+        return self.state_trajs.__getitem__(key)  # noqa: WPS609
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Compare two objects.&#34;&#34;&#34;
+        if not isinstance(other, StateTraj):
+            return NotImplemented
+        return (
+            self.ntrajs == other.ntrajs and
+            all(
+                np.array_equal(self[idx], other[idx])
+                for idx in range(self.ntrajs)
+            )
+        )
+
+    def estimate_markov_model(self, lagtime):
+        &#34;&#34;&#34;Estimates Markov State Model.
+
+        This method estimates the MSM based on the transition count matrix.
+
+        Parameters
+        ----------
+        lagtime : int
+            Lag time for estimating the markov model given in [frames].
+
+        Returns
+        -------
+        T : ndarray
+            Transition rate matrix.
+
+        permutation : ndarray
+            Array with corresponding states.
+
+        &#34;&#34;&#34;
+        return mh.estimate_markov_model(self, lagtime)
+
+    def state_to_idx(self, state):
+        &#34;&#34;&#34;Get idx corresponding to state.
+
+        Parameters
+        ----------
+        state : int
+            State to get idx of.
+
+        Returns
+        -------
+        idx : int
+            Idx corresponding to state.
+
+        &#34;&#34;&#34;
+        idx = np.where(self.states == state)[0]
+        if not idx.size:
+            raise ValueError(
+                &#39;State &#34;{state}&#34; does not exists in trajectory.&#39;.format(
+                    state=state,
+                ),
+            )
+        return idx[0]
+
+
+class LumpedStateTraj(StateTraj):
+    &#34;&#34;&#34;Class for handling lumped discrete state trajectories.&#34;&#34;&#34;
+
+    def __new__(cls, macrotrajs, microtrajs=None):
+        &#34;&#34;&#34;Initialize new instance.&#34;&#34;&#34;
+        if isinstance(macrotrajs, LumpedStateTraj):
+            return macrotrajs
+        return super().__new__(cls, None)
+
+    def __init__(self, macrotrajs, microtrajs=None):
+        &#34;&#34;&#34;Initialize LumpedStateTraj and convert to index trajectories.
+
+        If called with LumpedStateTraj instance, it will be retuned instead.
+
+        Parameters
+        ----------
+        macrotrajs : list or ndarray or list of ndarray
+            Lumped state trajectory/trajectories. The states need to be
+            integers and all states needs to correspond to union of
+            microstates.
+
+        microtrajs : list or ndarray or list of ndarray
+            State trajectory/trajectories. EaThe states should start from zero
+            and need to be integers.
+
+        &#34;&#34;&#34;
+        if isinstance(macrotrajs, LumpedStateTraj):
+            return
+
+        if microtrajs is None:
+            raise TypeError(
+                &#39;microtrajs may only be None when macrotrajs is of type &#39; +
+                &#39;LumpedStateTraj.&#39;,
+            )
+        # initialize base class
+        self._parse_microtrajs(microtrajs)
+
+        # parse the microstate to macrostate lumping
+        self._parse_macrotrajs(macrotrajs)
+
+    @property
+    def states(self):
+        &#34;&#34;&#34;Return active set of macrostates.
+
+        Returns
+        -------
+        states : ndarray
+            Numpy array holding active set of states.
+
+        &#34;&#34;&#34;
+        return self._macrostates
+
+    @property
+    def nstates(self):
+        &#34;&#34;&#34;Return number of macrostates.
+
+        Returns
+        -------
+        nstates : int
+            Number of states.
+
+        &#34;&#34;&#34;
+        return len(self.states)
+
+    @property
+    def microstate_trajs(self):
+        &#34;&#34;&#34;Return microstate trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        if np.array_equal(self.microstates, np.arange(self.nmicrostates)):
+            return self.trajs
+        return tools.shift_data(
+            self.trajs,
+            np.arange(self.nmicrostates),
+            self.microstates,
+        )
+
+    @property
+    def microstate_trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened state trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of state trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self.microstate_trajs)
+
+    @property
+    def state_trajs(self):
+        &#34;&#34;&#34;Return macrostate trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input macrostate data.
+
+        &#34;&#34;&#34;
+        return tools.shift_data(
+            self.trajs,
+            np.arange(self.nmicrostates),
+            self.state_assignment,
+        )
+
+    @property
+    def state_trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened macrostate trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of macrostate trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self.state_trajs)
+
+    @property
+    def microstates(self):
+        &#34;&#34;&#34;Return active set of states.
+
+        Returns
+        -------
+        states : ndarray
+            Numpy array holding active set of states.
+
+        &#34;&#34;&#34;
+        return self._states
+
+    @property
+    def nmicrostates(self):
+        &#34;&#34;&#34;Return number of states.
+
+        Returns
+        -------
+        nstates : int
+            Number of states.
+
+        &#34;&#34;&#34;
+        return len(self.microstates)
+
+    def __repr__(self):
+        &#34;&#34;&#34;Return representation of class.&#34;&#34;&#34;
+        kw = {
+            &#39;clname&#39;: self.__class__.__name__,
+            &#39;trajs&#39;: self.state_trajs,
+            &#39;microtrajs&#39;: self.microstate_trajs,
+        }
+        return (&#39;{clname}({trajs}, {microtrajs})&#39;.format(**kw))
+
+    def __str__(self):
+        &#34;&#34;&#34;Return string representation of class.&#34;&#34;&#34;
+        return (&#39;{trajs!s}&#39;.format(trajs=self.state_trajs))
+
+    def __iter__(self):
+        &#34;&#34;&#34;Iterate over trajectories.&#34;&#34;&#34;
+        return iter(self.state_trajs)
+
+    def __len__(self):
+        &#34;&#34;&#34;Return length of list of trajectories.&#34;&#34;&#34;
+        return len(self.trajs)
+
+    def __getitem__(self, key):
+        &#34;&#34;&#34;Get key value.&#34;&#34;&#34;
+        return self.state_trajs.__getitem__(key)  # noqa: WPS609
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Compare two objects.&#34;&#34;&#34;
+        if not isinstance(other, LumpedStateTraj):
+            return NotImplemented
+        return (
+            self.ntrajs == other.ntrajs and
+            all(
+                np.array_equal(self.trajs[idx], other.trajs[idx])
+                for idx in range(self.ntrajs)
+            ) and
+            np.array_equal(self.state_assignment, other.state_assignment)
+        )
+
+    def estimate_markov_model(self, lagtime):
+        &#34;&#34;&#34;Estimates Markov State Model.
+
+        This method estimates the microstate MSM based on the transition count
+        matrix, followed by Szabo-Hummer projection formalism to macrostates.
+
+        Parameters
+        ----------
+        lagtime : int
+            Lag time for estimating the markov model given in [frames].
+
+        Returns
+        -------
+        T : ndarray
+            Transition rate matrix.
+
+        permutation : ndarray
+            Array with corresponding states.
+
+        &#34;&#34;&#34;
+        # in the following corresponds &#39;i&#39; to micro and &#39;a&#39; to macro
+        msm_i, _ = mh.estimate_markov_model(self, lagtime)
+        if not tests.is_ergodic(msm_i):
+            raise TypeError(&#39;tmat needs to be ergodic transition matrix.&#39;)
+        return (self._estimate_markov_model(msm_i), self.states)
+
+    def _estimate_markov_model(self, msm_i):
+        &#34;&#34;&#34;Estimates Markov State Model.&#34;&#34;&#34;
+        ones_i = np.ones_like(self.microstates)
+        ones_a = np.ones_like(self.states)
+        id_i = np.diag(ones_i)
+        id_a = np.diag(ones_a)
+
+        peq_i = mh.peq(msm_i)
+        peq_a = np.array([
+            np.sum(peq_i[self.state_assignment == state])
+            for state in self.states
+        ])
+        d_i = np.diag(peq_i)
+        d_a = np.diag(peq_a)
+        aggret = np.zeros((self.nmicrostates, self.nstates))
+        aggret[(np.arange(self.nmicrostates), self.state_assignment_idx)] = 1
+
+        m_prime = np.linalg.inv(
+            id_i +
+            ones_i[:, np.newaxis] * peq_i[np.newaxis:, ] -
+            msm_i,
+        )
+        m_twoprime = np.linalg.inv(
+            np.linalg.multi_dot((aggret.T, d_i, m_prime, aggret)),
+        )
+
+        msm_a = (
+            id_a +
+            ones_a[:, np.newaxis] * peq_a[np.newaxis:, ] -
+            m_twoprime @ d_a
+        )
+        return mh.msm.row_normalize_matrix(msm_a)
+
+    def _parse_macrotrajs(self, macrotrajs):
+        &#34;&#34;&#34;Parse the macrotrajs.&#34;&#34;&#34;
+        # TODO: improve performance by not using StateTraj
+        macrotrajs = StateTraj(macrotrajs)
+        self._macrostates = macrotrajs.states.copy()
+
+        # cache flattened trajectories to speed up code for many states
+        macrotrajs_flatten = macrotrajs.state_trajs_flatten
+        microtrajs_flatten = self.microstate_trajs_flatten
+
+        self.state_assignment = np.zeros(self.nmicrostates, dtype=np.int64)
+        for idx, microstate in enumerate(self.microstates):
+            idx_first = tools.find_first(microstate, microtrajs_flatten)
+            self.state_assignment[idx] = macrotrajs_flatten[idx_first]
+
+        self.state_assignment_idx = mh.shift_data(
+            self.state_assignment,
+            self.states,
+            np.arange(self.nstates),
+        )
+
+    def _parse_microtrajs(self, trajs):
+        &#34;&#34;&#34;Parse the microtrajs.&#34;&#34;&#34;
+        self._trajs = tools.format_state_traj(trajs)
+
+        # get number of states
+        self._states = tools.unique(self._trajs)
+
+        # shift to indices
+        if not np.array_equal(self._states, np.arange(self.nmicrostates)):
+            self._trajs, self._states = tools.rename_by_index(  # noqa: WPS414
+                self._trajs,
+                return_permutation=True,
+            )
+
+        # set number of frames
+        self._nframes = np.sum([len(traj) for traj in self.trajs])</code></pre>
+</details>
 </section>
 <section>
 </section>
@@ -55,6 +604,291 @@ microstates.</dd>
 <dd>State trajectory/trajectories. EaThe states should start from zero
 and need to be integers.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LumpedStateTraj(StateTraj):
+    &#34;&#34;&#34;Class for handling lumped discrete state trajectories.&#34;&#34;&#34;
+
+    def __new__(cls, macrotrajs, microtrajs=None):
+        &#34;&#34;&#34;Initialize new instance.&#34;&#34;&#34;
+        if isinstance(macrotrajs, LumpedStateTraj):
+            return macrotrajs
+        return super().__new__(cls, None)
+
+    def __init__(self, macrotrajs, microtrajs=None):
+        &#34;&#34;&#34;Initialize LumpedStateTraj and convert to index trajectories.
+
+        If called with LumpedStateTraj instance, it will be retuned instead.
+
+        Parameters
+        ----------
+        macrotrajs : list or ndarray or list of ndarray
+            Lumped state trajectory/trajectories. The states need to be
+            integers and all states needs to correspond to union of
+            microstates.
+
+        microtrajs : list or ndarray or list of ndarray
+            State trajectory/trajectories. EaThe states should start from zero
+            and need to be integers.
+
+        &#34;&#34;&#34;
+        if isinstance(macrotrajs, LumpedStateTraj):
+            return
+
+        if microtrajs is None:
+            raise TypeError(
+                &#39;microtrajs may only be None when macrotrajs is of type &#39; +
+                &#39;LumpedStateTraj.&#39;,
+            )
+        # initialize base class
+        self._parse_microtrajs(microtrajs)
+
+        # parse the microstate to macrostate lumping
+        self._parse_macrotrajs(macrotrajs)
+
+    @property
+    def states(self):
+        &#34;&#34;&#34;Return active set of macrostates.
+
+        Returns
+        -------
+        states : ndarray
+            Numpy array holding active set of states.
+
+        &#34;&#34;&#34;
+        return self._macrostates
+
+    @property
+    def nstates(self):
+        &#34;&#34;&#34;Return number of macrostates.
+
+        Returns
+        -------
+        nstates : int
+            Number of states.
+
+        &#34;&#34;&#34;
+        return len(self.states)
+
+    @property
+    def microstate_trajs(self):
+        &#34;&#34;&#34;Return microstate trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        if np.array_equal(self.microstates, np.arange(self.nmicrostates)):
+            return self.trajs
+        return tools.shift_data(
+            self.trajs,
+            np.arange(self.nmicrostates),
+            self.microstates,
+        )
+
+    @property
+    def microstate_trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened state trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of state trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self.microstate_trajs)
+
+    @property
+    def state_trajs(self):
+        &#34;&#34;&#34;Return macrostate trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input macrostate data.
+
+        &#34;&#34;&#34;
+        return tools.shift_data(
+            self.trajs,
+            np.arange(self.nmicrostates),
+            self.state_assignment,
+        )
+
+    @property
+    def state_trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened macrostate trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of macrostate trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self.state_trajs)
+
+    @property
+    def microstates(self):
+        &#34;&#34;&#34;Return active set of states.
+
+        Returns
+        -------
+        states : ndarray
+            Numpy array holding active set of states.
+
+        &#34;&#34;&#34;
+        return self._states
+
+    @property
+    def nmicrostates(self):
+        &#34;&#34;&#34;Return number of states.
+
+        Returns
+        -------
+        nstates : int
+            Number of states.
+
+        &#34;&#34;&#34;
+        return len(self.microstates)
+
+    def __repr__(self):
+        &#34;&#34;&#34;Return representation of class.&#34;&#34;&#34;
+        kw = {
+            &#39;clname&#39;: self.__class__.__name__,
+            &#39;trajs&#39;: self.state_trajs,
+            &#39;microtrajs&#39;: self.microstate_trajs,
+        }
+        return (&#39;{clname}({trajs}, {microtrajs})&#39;.format(**kw))
+
+    def __str__(self):
+        &#34;&#34;&#34;Return string representation of class.&#34;&#34;&#34;
+        return (&#39;{trajs!s}&#39;.format(trajs=self.state_trajs))
+
+    def __iter__(self):
+        &#34;&#34;&#34;Iterate over trajectories.&#34;&#34;&#34;
+        return iter(self.state_trajs)
+
+    def __len__(self):
+        &#34;&#34;&#34;Return length of list of trajectories.&#34;&#34;&#34;
+        return len(self.trajs)
+
+    def __getitem__(self, key):
+        &#34;&#34;&#34;Get key value.&#34;&#34;&#34;
+        return self.state_trajs.__getitem__(key)  # noqa: WPS609
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Compare two objects.&#34;&#34;&#34;
+        if not isinstance(other, LumpedStateTraj):
+            return NotImplemented
+        return (
+            self.ntrajs == other.ntrajs and
+            all(
+                np.array_equal(self.trajs[idx], other.trajs[idx])
+                for idx in range(self.ntrajs)
+            ) and
+            np.array_equal(self.state_assignment, other.state_assignment)
+        )
+
+    def estimate_markov_model(self, lagtime):
+        &#34;&#34;&#34;Estimates Markov State Model.
+
+        This method estimates the microstate MSM based on the transition count
+        matrix, followed by Szabo-Hummer projection formalism to macrostates.
+
+        Parameters
+        ----------
+        lagtime : int
+            Lag time for estimating the markov model given in [frames].
+
+        Returns
+        -------
+        T : ndarray
+            Transition rate matrix.
+
+        permutation : ndarray
+            Array with corresponding states.
+
+        &#34;&#34;&#34;
+        # in the following corresponds &#39;i&#39; to micro and &#39;a&#39; to macro
+        msm_i, _ = mh.estimate_markov_model(self, lagtime)
+        if not tests.is_ergodic(msm_i):
+            raise TypeError(&#39;tmat needs to be ergodic transition matrix.&#39;)
+        return (self._estimate_markov_model(msm_i), self.states)
+
+    def _estimate_markov_model(self, msm_i):
+        &#34;&#34;&#34;Estimates Markov State Model.&#34;&#34;&#34;
+        ones_i = np.ones_like(self.microstates)
+        ones_a = np.ones_like(self.states)
+        id_i = np.diag(ones_i)
+        id_a = np.diag(ones_a)
+
+        peq_i = mh.peq(msm_i)
+        peq_a = np.array([
+            np.sum(peq_i[self.state_assignment == state])
+            for state in self.states
+        ])
+        d_i = np.diag(peq_i)
+        d_a = np.diag(peq_a)
+        aggret = np.zeros((self.nmicrostates, self.nstates))
+        aggret[(np.arange(self.nmicrostates), self.state_assignment_idx)] = 1
+
+        m_prime = np.linalg.inv(
+            id_i +
+            ones_i[:, np.newaxis] * peq_i[np.newaxis:, ] -
+            msm_i,
+        )
+        m_twoprime = np.linalg.inv(
+            np.linalg.multi_dot((aggret.T, d_i, m_prime, aggret)),
+        )
+
+        msm_a = (
+            id_a +
+            ones_a[:, np.newaxis] * peq_a[np.newaxis:, ] -
+            m_twoprime @ d_a
+        )
+        return mh.msm.row_normalize_matrix(msm_a)
+
+    def _parse_macrotrajs(self, macrotrajs):
+        &#34;&#34;&#34;Parse the macrotrajs.&#34;&#34;&#34;
+        # TODO: improve performance by not using StateTraj
+        macrotrajs = StateTraj(macrotrajs)
+        self._macrostates = macrotrajs.states.copy()
+
+        # cache flattened trajectories to speed up code for many states
+        macrotrajs_flatten = macrotrajs.state_trajs_flatten
+        microtrajs_flatten = self.microstate_trajs_flatten
+
+        self.state_assignment = np.zeros(self.nmicrostates, dtype=np.int64)
+        for idx, microstate in enumerate(self.microstates):
+            idx_first = tools.find_first(microstate, microtrajs_flatten)
+            self.state_assignment[idx] = macrotrajs_flatten[idx_first]
+
+        self.state_assignment_idx = mh.shift_data(
+            self.state_assignment,
+            self.states,
+            np.arange(self.nstates),
+        )
+
+    def _parse_microtrajs(self, trajs):
+        &#34;&#34;&#34;Parse the microtrajs.&#34;&#34;&#34;
+        self._trajs = tools.format_state_traj(trajs)
+
+        # get number of states
+        self._states = tools.unique(self._trajs)
+
+        # shift to indices
+        if not np.array_equal(self._states, np.arange(self.nmicrostates)):
+            self._trajs, self._states = tools.rename_by_index(  # noqa: WPS414
+                self._trajs,
+                return_permutation=True,
+            )
+
+        # set number of frames
+        self._nframes = np.sum([len(traj) for traj in self.trajs])</code></pre>
+</details>
 <h3>Ancestors</h3>
 <ul class="hlist">
 <li><a title="msmhelper.statetraj.StateTraj" href="#msmhelper.statetraj.StateTraj">StateTraj</a></li>
@@ -69,6 +903,28 @@ and need to be integers.</dd>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>list</code> of <code>ndarrays</code></dt>
 <dd>List of ndarrays holding the input data.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def microstate_trajs(self):
+    &#34;&#34;&#34;Return microstate trajectory.
+
+    Returns
+    -------
+    trajs : list of ndarrays
+        List of ndarrays holding the input data.
+
+    &#34;&#34;&#34;
+    if np.array_equal(self.microstates, np.arange(self.nmicrostates)):
+        return self.trajs
+    return tools.shift_data(
+        self.trajs,
+        np.arange(self.nmicrostates),
+        self.microstates,
+    )</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.LumpedStateTraj.microstate_trajs_flatten"><code class="name">var <span class="ident">microstate_trajs_flatten</span></code></dt>
 <dd>
@@ -78,6 +934,22 @@ and need to be integers.</dd>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>1D ndarrays representation of state trajectories.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def microstate_trajs_flatten(self):
+    &#34;&#34;&#34;Return flattened state trajectory.
+
+    Returns
+    -------
+    trajs : ndarray
+        1D ndarrays representation of state trajectories.
+
+    &#34;&#34;&#34;
+    return np.concatenate(self.microstate_trajs)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.LumpedStateTraj.microstates"><code class="name">var <span class="ident">microstates</span></code></dt>
 <dd>
@@ -87,6 +959,22 @@ and need to be integers.</dd>
 <dt><strong><code>states</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Numpy array holding active set of states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def microstates(self):
+    &#34;&#34;&#34;Return active set of states.
+
+    Returns
+    -------
+    states : ndarray
+        Numpy array holding active set of states.
+
+    &#34;&#34;&#34;
+    return self._states</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.LumpedStateTraj.nmicrostates"><code class="name">var <span class="ident">nmicrostates</span></code></dt>
 <dd>
@@ -96,6 +984,22 @@ and need to be integers.</dd>
 <dt><strong><code>nstates</code></strong> :&ensp;<code>int</code></dt>
 <dd>Number of states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def nmicrostates(self):
+    &#34;&#34;&#34;Return number of states.
+
+    Returns
+    -------
+    nstates : int
+        Number of states.
+
+    &#34;&#34;&#34;
+    return len(self.microstates)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.LumpedStateTraj.nstates"><code class="name">var <span class="ident">nstates</span></code></dt>
 <dd>
@@ -105,6 +1009,22 @@ and need to be integers.</dd>
 <dt><strong><code>nstates</code></strong> :&ensp;<code>int</code></dt>
 <dd>Number of states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def nstates(self):
+    &#34;&#34;&#34;Return number of macrostates.
+
+    Returns
+    -------
+    nstates : int
+        Number of states.
+
+    &#34;&#34;&#34;
+    return len(self.states)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.LumpedStateTraj.state_trajs"><code class="name">var <span class="ident">state_trajs</span></code></dt>
 <dd>
@@ -114,6 +1034,26 @@ and need to be integers.</dd>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>list</code> of <code>ndarrays</code></dt>
 <dd>List of ndarrays holding the input macrostate data.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def state_trajs(self):
+    &#34;&#34;&#34;Return macrostate trajectory.
+
+    Returns
+    -------
+    trajs : list of ndarrays
+        List of ndarrays holding the input macrostate data.
+
+    &#34;&#34;&#34;
+    return tools.shift_data(
+        self.trajs,
+        np.arange(self.nmicrostates),
+        self.state_assignment,
+    )</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.LumpedStateTraj.state_trajs_flatten"><code class="name">var <span class="ident">state_trajs_flatten</span></code></dt>
 <dd>
@@ -123,6 +1063,22 @@ and need to be integers.</dd>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>1D ndarrays representation of macrostate trajectories.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def state_trajs_flatten(self):
+    &#34;&#34;&#34;Return flattened macrostate trajectory.
+
+    Returns
+    -------
+    trajs : ndarray
+        1D ndarrays representation of macrostate trajectories.
+
+    &#34;&#34;&#34;
+    return np.concatenate(self.state_trajs)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.LumpedStateTraj.states"><code class="name">var <span class="ident">states</span></code></dt>
 <dd>
@@ -132,6 +1088,22 @@ and need to be integers.</dd>
 <dt><strong><code>states</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Numpy array holding active set of states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def states(self):
+    &#34;&#34;&#34;Return active set of macrostates.
+
+    Returns
+    -------
+    states : ndarray
+        Numpy array holding active set of states.
+
+    &#34;&#34;&#34;
+    return self._macrostates</code></pre>
+</details>
 </dd>
 </dl>
 <h3>Methods</h3>
@@ -155,6 +1127,36 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>permutation</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Array with corresponding states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def estimate_markov_model(self, lagtime):
+    &#34;&#34;&#34;Estimates Markov State Model.
+
+    This method estimates the microstate MSM based on the transition count
+    matrix, followed by Szabo-Hummer projection formalism to macrostates.
+
+    Parameters
+    ----------
+    lagtime : int
+        Lag time for estimating the markov model given in [frames].
+
+    Returns
+    -------
+    T : ndarray
+        Transition rate matrix.
+
+    permutation : ndarray
+        Array with corresponding states.
+
+    &#34;&#34;&#34;
+    # in the following corresponds &#39;i&#39; to micro and &#39;a&#39; to macro
+    msm_i, _ = mh.estimate_markov_model(self, lagtime)
+    if not tests.is_ergodic(msm_i):
+        raise TypeError(&#39;tmat needs to be ergodic transition matrix.&#39;)
+    return (self._estimate_markov_model(msm_i), self.states)</code></pre>
+</details>
 </dd>
 </dl>
 <h3>Inherited members</h3>
@@ -184,6 +1186,261 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>list</code> or <code>ndarray</code> or <code>list</code> of <code>ndarray</code></dt>
 <dd>State trajectory/trajectories. The states need to be integers.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StateTraj:  # noqa: WPS214
+    &#34;&#34;&#34;Class for handling discrete state trajectories.&#34;&#34;&#34;
+
+    # noqa: E800 # add slots magic,  self.__slots__ = (&#39;_states&#39;, &#39;_trajs&#39;).
+    def __new__(cls, trajs):
+        &#34;&#34;&#34;Initialize new instance.
+
+        If called with instance, return instance instead.
+
+        &#34;&#34;&#34;
+        if isinstance(trajs, StateTraj):
+            return trajs
+        return super().__new__(cls)
+
+    def __init__(self, trajs):
+        &#34;&#34;&#34;Initialize StateTraj and convert to index trajectories.
+
+        If called with StateTraj instance, it will be retuned instead.
+
+        Parameters
+        ----------
+        trajs : list or ndarray or list of ndarray
+            State trajectory/trajectories. The states need to be integers.
+
+        &#34;&#34;&#34;
+        if isinstance(trajs, StateTraj):
+            return
+
+        self.state_trajs = trajs
+
+    @property
+    def states(self):
+        &#34;&#34;&#34;Return active set of states.
+
+        Returns
+        -------
+        states : ndarray
+            Numpy array holding active set of states.
+
+        &#34;&#34;&#34;
+        return self._states
+
+    @property
+    def nstates(self):
+        &#34;&#34;&#34;Return number of states.
+
+        Returns
+        -------
+        nstates : int
+            Number of states.
+
+        &#34;&#34;&#34;
+        return len(self.states)
+
+    @property
+    def ntrajs(self):
+        &#34;&#34;&#34;Return number of trajectories.
+
+        Returns
+        -------
+        ntrajs : int
+            Number of trajectories.
+
+        &#34;&#34;&#34;
+        return len(self)
+
+    @property
+    def nframes(self):
+        &#34;&#34;&#34;Return cummulated length of all trajectories.
+
+        Returns
+        -------
+        nframes : int
+            Number of frames of all trajectories.
+
+        &#34;&#34;&#34;
+        return self._nframes
+
+    @property
+    def state_trajs(self):
+        &#34;&#34;&#34;Return state trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        if np.array_equal(self.states, np.arange(self.nstates)):
+            return self.trajs
+        return tools.shift_data(
+            self.trajs,
+            np.arange(self.nstates),
+            self.states,
+        )
+
+    @state_trajs.setter
+    def state_trajs(self, trajs):
+        &#34;&#34;&#34;Set the state trajectory.
+
+        Parameters
+        ----------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        self._trajs = tools.format_state_traj(trajs)
+
+        # get number of states
+        self._states = tools.unique(self._trajs)
+
+        # shift to indices
+        if not np.array_equal(self._states, np.arange(self.nstates)):
+            self._trajs, self._states = tools.rename_by_index(  # noqa: WPS414
+                self._trajs,
+                return_permutation=True,
+            )
+
+        # set number of frames
+        self._nframes = np.sum([len(traj) for traj in self.trajs])
+
+    @property
+    def state_trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened state trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of state trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self.state_trajs)
+
+    @property
+    def index_trajs(self):
+        &#34;&#34;&#34;Return index trajectory.
+
+        Same as `self.trajs`
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        return self.trajs
+
+    @property
+    def trajs(self):
+        &#34;&#34;&#34;Return index trajectory.
+
+        Returns
+        -------
+        trajs : list of ndarrays
+            List of ndarrays holding the input data.
+
+        &#34;&#34;&#34;
+        return self._trajs
+
+    @property
+    def trajs_flatten(self):
+        &#34;&#34;&#34;Return flattened index trajectory.
+
+        Returns
+        -------
+        trajs : ndarray
+            1D ndarrays representation of index trajectories.
+
+        &#34;&#34;&#34;
+        return np.concatenate(self._trajs)
+
+    def __repr__(self):
+        &#34;&#34;&#34;Return representation of class.&#34;&#34;&#34;
+        kw = {
+            &#39;clname&#39;: self.__class__.__name__,
+            &#39;trajs&#39;: self.state_trajs,
+        }
+        return (&#39;{clname}({trajs})&#39;.format(**kw))
+
+    def __str__(self):
+        &#34;&#34;&#34;Return string representation of class.&#34;&#34;&#34;
+        return (&#39;{trajs!s}&#39;.format(trajs=self.state_trajs))
+
+    def __iter__(self):
+        &#34;&#34;&#34;Iterate over trajectories.&#34;&#34;&#34;
+        return iter(self.state_trajs)
+
+    def __len__(self):
+        &#34;&#34;&#34;Return length of list of trajectories.&#34;&#34;&#34;
+        return len(self.trajs)
+
+    def __getitem__(self, key):
+        &#34;&#34;&#34;Get key value.&#34;&#34;&#34;
+        return self.state_trajs.__getitem__(key)  # noqa: WPS609
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Compare two objects.&#34;&#34;&#34;
+        if not isinstance(other, StateTraj):
+            return NotImplemented
+        return (
+            self.ntrajs == other.ntrajs and
+            all(
+                np.array_equal(self[idx], other[idx])
+                for idx in range(self.ntrajs)
+            )
+        )
+
+    def estimate_markov_model(self, lagtime):
+        &#34;&#34;&#34;Estimates Markov State Model.
+
+        This method estimates the MSM based on the transition count matrix.
+
+        Parameters
+        ----------
+        lagtime : int
+            Lag time for estimating the markov model given in [frames].
+
+        Returns
+        -------
+        T : ndarray
+            Transition rate matrix.
+
+        permutation : ndarray
+            Array with corresponding states.
+
+        &#34;&#34;&#34;
+        return mh.estimate_markov_model(self, lagtime)
+
+    def state_to_idx(self, state):
+        &#34;&#34;&#34;Get idx corresponding to state.
+
+        Parameters
+        ----------
+        state : int
+            State to get idx of.
+
+        Returns
+        -------
+        idx : int
+            Idx corresponding to state.
+
+        &#34;&#34;&#34;
+        idx = np.where(self.states == state)[0]
+        if not idx.size:
+            raise ValueError(
+                &#39;State &#34;{state}&#34; does not exists in trajectory.&#39;.format(
+                    state=state,
+                ),
+            )
+        return idx[0]</code></pre>
+</details>
 <h3>Subclasses</h3>
 <ul class="hlist">
 <li><a title="msmhelper.statetraj.LumpedStateTraj" href="#msmhelper.statetraj.LumpedStateTraj">LumpedStateTraj</a></li>
@@ -199,6 +1456,24 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>list</code> of <code>ndarrays</code></dt>
 <dd>List of ndarrays holding the input data.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def index_trajs(self):
+    &#34;&#34;&#34;Return index trajectory.
+
+    Same as `self.trajs`
+
+    Returns
+    -------
+    trajs : list of ndarrays
+        List of ndarrays holding the input data.
+
+    &#34;&#34;&#34;
+    return self.trajs</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.nframes"><code class="name">var <span class="ident">nframes</span></code></dt>
 <dd>
@@ -208,6 +1483,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>nframes</code></strong> :&ensp;<code>int</code></dt>
 <dd>Number of frames of all trajectories.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def nframes(self):
+    &#34;&#34;&#34;Return cummulated length of all trajectories.
+
+    Returns
+    -------
+    nframes : int
+        Number of frames of all trajectories.
+
+    &#34;&#34;&#34;
+    return self._nframes</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.nstates"><code class="name">var <span class="ident">nstates</span></code></dt>
 <dd>
@@ -217,6 +1508,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>nstates</code></strong> :&ensp;<code>int</code></dt>
 <dd>Number of states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def nstates(self):
+    &#34;&#34;&#34;Return number of states.
+
+    Returns
+    -------
+    nstates : int
+        Number of states.
+
+    &#34;&#34;&#34;
+    return len(self.states)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.ntrajs"><code class="name">var <span class="ident">ntrajs</span></code></dt>
 <dd>
@@ -226,6 +1533,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>ntrajs</code></strong> :&ensp;<code>int</code></dt>
 <dd>Number of trajectories.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def ntrajs(self):
+    &#34;&#34;&#34;Return number of trajectories.
+
+    Returns
+    -------
+    ntrajs : int
+        Number of trajectories.
+
+    &#34;&#34;&#34;
+    return len(self)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.state_trajs"><code class="name">var <span class="ident">state_trajs</span></code></dt>
 <dd>
@@ -235,6 +1558,28 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>list</code> of <code>ndarrays</code></dt>
 <dd>List of ndarrays holding the input data.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def state_trajs(self):
+    &#34;&#34;&#34;Return state trajectory.
+
+    Returns
+    -------
+    trajs : list of ndarrays
+        List of ndarrays holding the input data.
+
+    &#34;&#34;&#34;
+    if np.array_equal(self.states, np.arange(self.nstates)):
+        return self.trajs
+    return tools.shift_data(
+        self.trajs,
+        np.arange(self.nstates),
+        self.states,
+    )</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.state_trajs_flatten"><code class="name">var <span class="ident">state_trajs_flatten</span></code></dt>
 <dd>
@@ -244,6 +1589,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>1D ndarrays representation of state trajectories.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def state_trajs_flatten(self):
+    &#34;&#34;&#34;Return flattened state trajectory.
+
+    Returns
+    -------
+    trajs : ndarray
+        1D ndarrays representation of state trajectories.
+
+    &#34;&#34;&#34;
+    return np.concatenate(self.state_trajs)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.states"><code class="name">var <span class="ident">states</span></code></dt>
 <dd>
@@ -253,6 +1614,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>states</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Numpy array holding active set of states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def states(self):
+    &#34;&#34;&#34;Return active set of states.
+
+    Returns
+    -------
+    states : ndarray
+        Numpy array holding active set of states.
+
+    &#34;&#34;&#34;
+    return self._states</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.trajs"><code class="name">var <span class="ident">trajs</span></code></dt>
 <dd>
@@ -262,6 +1639,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>list</code> of <code>ndarrays</code></dt>
 <dd>List of ndarrays holding the input data.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def trajs(self):
+    &#34;&#34;&#34;Return index trajectory.
+
+    Returns
+    -------
+    trajs : list of ndarrays
+        List of ndarrays holding the input data.
+
+    &#34;&#34;&#34;
+    return self._trajs</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.trajs_flatten"><code class="name">var <span class="ident">trajs_flatten</span></code></dt>
 <dd>
@@ -271,6 +1664,22 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>trajs</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>1D ndarrays representation of index trajectories.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def trajs_flatten(self):
+    &#34;&#34;&#34;Return flattened index trajectory.
+
+    Returns
+    -------
+    trajs : ndarray
+        1D ndarrays representation of index trajectories.
+
+    &#34;&#34;&#34;
+    return np.concatenate(self._trajs)</code></pre>
+</details>
 </dd>
 </dl>
 <h3>Methods</h3>
@@ -293,6 +1702,31 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>permutation</code></strong> :&ensp;<code>ndarray</code></dt>
 <dd>Array with corresponding states.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def estimate_markov_model(self, lagtime):
+    &#34;&#34;&#34;Estimates Markov State Model.
+
+    This method estimates the MSM based on the transition count matrix.
+
+    Parameters
+    ----------
+    lagtime : int
+        Lag time for estimating the markov model given in [frames].
+
+    Returns
+    -------
+    T : ndarray
+        Transition rate matrix.
+
+    permutation : ndarray
+        Array with corresponding states.
+
+    &#34;&#34;&#34;
+    return mh.estimate_markov_model(self, lagtime)</code></pre>
+</details>
 </dd>
 <dt id="msmhelper.statetraj.StateTraj.state_to_idx"><code class="name flex">
 <span>def <span class="ident">state_to_idx</span></span>(<span>self, state)</span>
@@ -309,6 +1743,33 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 <dt><strong><code>idx</code></strong> :&ensp;<code>int</code></dt>
 <dd>Idx corresponding to state.</dd>
 </dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def state_to_idx(self, state):
+    &#34;&#34;&#34;Get idx corresponding to state.
+
+    Parameters
+    ----------
+    state : int
+        State to get idx of.
+
+    Returns
+    -------
+    idx : int
+        Idx corresponding to state.
+
+    &#34;&#34;&#34;
+    idx = np.where(self.states == state)[0]
+    if not idx.size:
+        raise ValueError(
+            &#39;State &#34;{state}&#34; does not exists in trajectory.&#39;.format(
+                state=state,
+            ),
+        )
+    return idx[0]</code></pre>
+</details>
 </dd>
 </dl>
 </dd>
@@ -316,52 +1777,6 @@ matrix, followed by Szabo-Hummer projection formalism to macrostates.</p>
 </section>
 </article>
 <nav id="sidebar">
-<form>
-<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
-disabled minlength="2">
-</form>
-<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.3/tingle.min.css" integrity="sha512-j1u8eUJ4f23xPPxwOrLUPQaCD2dwzNqqmDDcWS4deWsMv2ohLqmXXuP3hU7g8TyzbMSakP/mMqoNBYWj8AEIFg==" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.3/tingle.min.js" integrity="sha512-plGUER9JkeEWPPqQBE4sdLqBoQug5Ap+BCGMc7bJ8BXkm+VVj6QzkpBz5Yv2yPkkq+cqg9IpkBaGCas6uDbW8g==" crossorigin></script>
-<style>
-.modal-dialog iframe {
-width: 100vw;
-height: calc(100vh - 80px);
-}
-@media screen and (min-width: 700px) {
-.modal-dialog iframe {
-width: 70vw;
-height: 80vh;
-}
-}
-.modal-dialog .tingle-modal-box {width: auto;}
-.modal-dialog .tingle-modal-box__content {padding: 0;}
-</style>
-<script>
-const input = document.getElementById('lunr-search');
-input.disabled = false;
-input.form.addEventListener('submit', (ev) => {
-ev.preventDefault();
-const url = new URL(window.location);
-url.searchParams.set('q', input.value);
-history.replaceState({}, null, url.toString());
-search(input.value);
-});
-const query = new URL(window.location).searchParams.get('q');
-if (query)
-search(query);
-function search(query) {
-const url = '../doc-search.html#' + encodeURIComponent(query);
-new tingle.modal({
-cssClass: ['modal-dialog'],
-onClose: () => {
-const url = new URL(window.location);
-url.searchParams.delete('q');
-history.replaceState({}, null, url.toString());
-setTimeout(() => input.focus(), 100);
-}
-}).setContent('<iframe src="' + url + '"></iframe>').open();
-}
-</script>
 <h1>Index</h1>
 <div class="toc">
 <ul></ul>
@@ -418,7 +1833,9 @@ setTimeout(() => input.focus(), 100);
 </svg>
 </a>
 <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
 </body>
 </html>
