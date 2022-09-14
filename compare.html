@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>msmhelper.compare API documentation</title>
+<meta name="description" content="Set of helpful functions for comparing markov state models …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#282c34;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin:1em 0;padding:1ex}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver;margin-top:10px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML'></script>
+<style>.homelink{display:block;font-size:2em;font-weight:bold;color:#555;padding-bottom:.5em;border-bottom:1px solid silver}.homelink:hover{color:inherit}.homelink img{max-width:100%;max-height:5em;margin:auto;margin-bottom:.3em}.darkmode{display:none !important}</style>
+<link rel="icon" href="icon.png">
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>msmhelper.compare</code></h1>
+</header>
+<section id="section-intro">
+<p>Set of helpful functions for comparing markov state models.</p>
+<p>BSD 3-Clause License
+Copyright (c) 2019-2020, Daniel Nagel
+All rights reserved.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+&#34;&#34;&#34;Set of helpful functions for comparing markov state models.
+
+BSD 3-Clause License
+Copyright (c) 2019-2020, Daniel Nagel
+All rights reserved.
+
+&#34;&#34;&#34;
+import numba
+import numpy as np
+
+from msmhelper.statetraj import StateTraj
+
+
+def compare_discretization(traj1, traj2, method=&#39;symmetric&#39;):
+    &#34;&#34;&#34;Compare similarity of two state discretizations.
+
+    This method compares the similarity of two state discretizations of the
+    same dataset. There are two different methods, &#39;directed&#39; gives a measure
+    on how high is the probable to assign a frame correclty knowing the
+    `traj1`. Hence splitting a state into many is not penalized, while merging
+    multiple into a single state is. Selecting &#39;symmetric&#39; it is check in both
+    directions, so it checks for each state if it is possible to assigned it
+    forward or backward. Hence, splitting and merging states is not penalized.
+
+    Parameters
+    ----------
+    traj1 : StateTraj like
+        First state discretization.
+    traj2 : StateTraj like
+        Second state discretization.
+    method : [&#39;symmetric&#39;, &#39;directed&#39;]
+        Selecting similarity norm. &#39;symmetric&#39; compares if each frame is
+        forward or backward assignable, while &#39;directed&#39; checks only if it is
+        forard assignable.
+
+    Returns
+    -------
+    similarity : float
+        Similarity going from [0, 1], where 1 means identical and 0 no
+        similarity at all.
+
+    &#34;&#34;&#34;
+    # format input
+    traj1, traj2 = StateTraj(traj1), StateTraj(traj2)
+    if method not in {&#39;symmetric&#39;, &#39;directed&#39;}:
+        raise ValueError(
+            &#39;Only methods &#34;symmetric&#34; and &#34;directed&#34; are supported&#39;,
+        )
+
+    # check if same length
+    if traj1.nframes != traj2.nframes:
+        raise ValueError(
+            &#39;Trajectories are of different length: &#39; +
+            &#39;{0} vs {1}&#39;.format(traj1.nframes, traj2.nframes),
+        )
+
+    # check if only single state
+    if traj1.nstates == 1 or traj2.nstates == 1:
+        raise ValueError(
+            &#39;Trajectories needs to have at least two states: &#39; +
+            &#39;{0} and {1}&#39;.format(traj1.nstates, traj2.nstates),
+        )
+    return _compare_discretization(traj1, traj2, method)
+
+
+def _compare_discretization(traj1, traj2, method):
+    &#34;&#34;&#34;Compare similarity of two state discretizations.&#34;&#34;&#34;
+    traj1_flat, traj2_flat = traj1.trajs_flatten, traj2.trajs_flatten
+    idx1 = [
+        np.where(traj1_flat == state)[0] for state in range(traj1.nstates)
+    ]
+    idx2 = [
+        np.where(traj2_flat == state)[0] for state in range(traj2.nstates)
+    ]
+    if not numba.config.DISABLE_JIT:  # pragma: no cover
+        idx1 = numba.typed.List(idx1)
+        idx2 = numba.typed.List(idx2)
+
+    # intersect arrays and normalize to length of lists
+    intersect = _intersect_array(idx1, idx2)
+    intersect12 = intersect / np.array(
+        [len(idx) for idx in idx1],
+    )[:, np.newaxis]
+    intersect21 = intersect.T / np.array(
+        [len(idx) for idx in idx2],
+    )[:, np.newaxis]
+
+    if method == &#39;symmetric&#39;:
+        return _compare_trajs_symmetric(
+            traj1_flat, traj2_flat, intersect12, intersect21,
+        )
+    elif method == &#39;directed&#39;:
+        return _compare_trajs_directed(
+            traj1_flat, traj2_flat, intersect12, intersect21,
+        )
+    raise ValueError(&#39;This should never be reached&#39;)
+
+
+@numba.njit(parallel=True)
+def _compare_trajs_symmetric(traj1, traj2, intersect12, intersect21):
+    nframes = len(traj1)
+    similarity = 0
+    for idx in numba.prange(nframes):
+        state1, state2 = traj1[idx], traj2[idx]
+        similarity += max([
+            intersect12[state1, state2], intersect21[state2, state1],
+        ])
+    return similarity / nframes
+
+
+@numba.njit(parallel=True)
+def _compare_trajs_directed(traj1, traj2, intersect12, intersect21):
+    nframes = len(traj1)
+    similarity = 0
+    for idx in numba.prange(nframes):
+        state1, state2 = traj1[idx], traj2[idx]
+        similarity += intersect21[state2, state1]
+    return similarity / nframes
+
+
+@numba.njit(parallel=True)
+def _intersect_array(idx1, idx2):
+    &#34;&#34;&#34;Intersect two list of arrays.&#34;&#34;&#34;
+    len1, len2 = len(idx1), len(idx2)
+    intersect = np.empty((len1, len2), dtype=np.float64)
+
+    for i in range(len1):
+        for j in numba.prange(len2):
+            intersect[i, j] = _intersect(idx1[i], idx2[j])
+
+    return intersect
+
+
+@numba.njit
+def _intersect(ar1, ar2):
+    &#34;&#34;&#34;Intersect unique sorted list ar1 with ar2.&#34;&#34;&#34;
+    idx1, idx2 = 0, 0
+    len1, len2 = len(ar1), len(ar2)
+
+    count = 0
+    while idx1 &lt; len1 and idx2 &lt; len2:
+        if ar1[idx1] == ar2[idx2]:
+            count += 1
+            idx1 += 1
+            idx2 += 1
+        elif ar1[idx1] &gt; ar2[idx2]:
+            idx2 += 1
+        else:
+            idx1 += 1
+
+    return count</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="msmhelper.compare.compare_discretization"><code class="name flex">
+<span>def <span class="ident">compare_discretization</span></span>(<span>traj1, traj2, method='symmetric')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Compare similarity of two state discretizations.</p>
+<p>This method compares the similarity of two state discretizations of the
+same dataset. There are two different methods, 'directed' gives a measure
+on how high is the probable to assign a frame correclty knowing the
+<code>traj1</code>. Hence splitting a state into many is not penalized, while merging
+multiple into a single state is. Selecting 'symmetric' it is check in both
+directions, so it checks for each state if it is possible to assigned it
+forward or backward. Hence, splitting and merging states is not penalized.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>traj1</code></strong> :&ensp;<code>StateTraj like</code></dt>
+<dd>First state discretization.</dd>
+<dt><strong><code>traj2</code></strong> :&ensp;<code>StateTraj like</code></dt>
+<dd>Second state discretization.</dd>
+<dt><strong><code>method</code></strong> :&ensp;<code>['symmetric', 'directed']</code></dt>
+<dd>Selecting similarity norm. 'symmetric' compares if each frame is
+forward or backward assignable, while 'directed' checks only if it is
+forard assignable.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>similarity</code></strong> :&ensp;<code>float</code></dt>
+<dd>Similarity going from [0, 1], where 1 means identical and 0 no
+similarity at all.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compare_discretization(traj1, traj2, method=&#39;symmetric&#39;):
+    &#34;&#34;&#34;Compare similarity of two state discretizations.
+
+    This method compares the similarity of two state discretizations of the
+    same dataset. There are two different methods, &#39;directed&#39; gives a measure
+    on how high is the probable to assign a frame correclty knowing the
+    `traj1`. Hence splitting a state into many is not penalized, while merging
+    multiple into a single state is. Selecting &#39;symmetric&#39; it is check in both
+    directions, so it checks for each state if it is possible to assigned it
+    forward or backward. Hence, splitting and merging states is not penalized.
+
+    Parameters
+    ----------
+    traj1 : StateTraj like
+        First state discretization.
+    traj2 : StateTraj like
+        Second state discretization.
+    method : [&#39;symmetric&#39;, &#39;directed&#39;]
+        Selecting similarity norm. &#39;symmetric&#39; compares if each frame is
+        forward or backward assignable, while &#39;directed&#39; checks only if it is
+        forard assignable.
+
+    Returns
+    -------
+    similarity : float
+        Similarity going from [0, 1], where 1 means identical and 0 no
+        similarity at all.
+
+    &#34;&#34;&#34;
+    # format input
+    traj1, traj2 = StateTraj(traj1), StateTraj(traj2)
+    if method not in {&#39;symmetric&#39;, &#39;directed&#39;}:
+        raise ValueError(
+            &#39;Only methods &#34;symmetric&#34; and &#34;directed&#34; are supported&#39;,
+        )
+
+    # check if same length
+    if traj1.nframes != traj2.nframes:
+        raise ValueError(
+            &#39;Trajectories are of different length: &#39; +
+            &#39;{0} vs {1}&#39;.format(traj1.nframes, traj2.nframes),
+        )
+
+    # check if only single state
+    if traj1.nstates == 1 or traj2.nstates == 1:
+        raise ValueError(
+            &#39;Trajectories needs to have at least two states: &#39; +
+            &#39;{0} and {1}&#39;.format(traj1.nstates, traj2.nstates),
+        )
+    return _compare_discretization(traj1, traj2, method)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<header>
+<a class="homelink" rel="home" title="msmhelper home" href="https://moldyn.github.io/msmhelper">
+<img src="logo_large_light.svg" style="width: 200px;" class="lightmode" alt="">
+</a>
+</header>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="msmhelper" href="index.html">msmhelper</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="msmhelper.compare.compare_discretization" href="#msmhelper.compare.compare_discretization">compare_discretization</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<a href="https://github.com/moldyn/msmhelper" class="github-corner" aria-label="View source on GitHub">
+<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#4d4f53; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+<path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+<path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+</svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
