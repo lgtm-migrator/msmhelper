@@ -453,7 +453,7 @@ INDEX=[
 {
 "ref":"msmhelper.linalg.left_eigenvectors",
 "url":9,
-"doc":"Estimate left eigenvectors. Estimates the left eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
+"doc":"Estimate left eigenvectors. Estimates the left eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. nvals : int, optional Number of returned eigenvalues and -vectors. Using ensures probability of real valued matrices. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
 "func":1
 },
 {
@@ -465,7 +465,7 @@ INDEX=[
 {
 "ref":"msmhelper.linalg.right_eigenvectors",
 "url":9,
-"doc":"Estimate right eigenvectors. Estimates the right eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
+"doc":"Estimate right eigenvectors. Estimates the right eigenvectors and corresponding eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvectors and eigenvalues or determined of. nvals : int, optional Number of returned eigenvalues and -vectors. Using ensures probability of real valued matrices. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending). eigenvectors : ndarray N eigenvectors sorted by descending eigenvalues.",
 "func":1
 },
 {
@@ -477,7 +477,7 @@ INDEX=[
 {
 "ref":"msmhelper.linalg.left_eigenvalues",
 "url":9,
-"doc":"Estimate left eigenvalues. Estimates the left eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
+"doc":"Estimate left eigenvalues. Estimates the left eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. nvals : int, optional Number of returned eigenvalues and -vectors. Using ensures probability of real valued matrices. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
 "func":1
 },
 {
@@ -489,7 +489,7 @@ INDEX=[
 {
 "ref":"msmhelper.linalg.right_eigenvalues",
 "url":9,
-"doc":"Estimate right eigenvalues. Estimates the right eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
+"doc":"Estimate right eigenvalues. Estimates the right eigenvalues of a quadratic matrix. Parameters      matrix : ndarray Quadratic 2d matrix eigenvalues or determined of. nvals : int, optional Number of returned eigenvalues and -vectors. Using ensures probability of real valued matrices. Returns    - eigenvalues : ndarray N eigenvalues sorted by their value (descending).",
 "func":1
 }
 ]
