@@ -279,7 +279,7 @@ INDEX=[
 {
 "ref":"msmhelper.msm.implied_timescales",
 "url":4,
-"doc":"Calculate the implied timescales. Calculate the implied timescales for the given values.  todo catch if for higher lagtimes the dimensionality changes Parameters      trajs : StateTraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtimes : list or ndarray int Lagtimes for estimating the markov model given in [frames]. This is not implemented yet! reversible : bool If reversibility should be enforced for the markov state model. Returns    - T : ndarray Transition rate matrix.",
+"doc":"Calculate the implied timescales. Calculate the implied timescales for the given values.  todo catch if for higher lagtimes the dimensionality changes Parameters      trajs : StateTraj or list or ndarray or list of ndarray State trajectory/trajectories. The states should start from zero and need to be integers. lagtimes : list or ndarray int Lagtimes for estimating the markov model given in [frames]. This is not implemented yet! ntimescales : int, optional Number of returned lagtimes. reversible : bool If reversibility should be enforced for the markov state model. Returns    - T : ndarray Transition rate matrix.",
 "func":1
 },
 {
