@@ -213,7 +213,9 @@ def implied_timescales(trajs, lagtimes, ntimescales=None, reversible=False):
     if not (lagtimes &gt; 0).all():
         raise TypeError(&#39;Lagtimes needs to be positive integers&#39;)
     if reversible:
-        raise TypeError(&#39;Reversible matrices are not anymore supported.&#39;)
+        raise NotImplementedError(
+            &#39;Reversible matrices are not anymore supported.&#39;
+        )
 
     if ntimescales is None:
         ntimescales = trajs.nstates - 1
@@ -487,7 +489,9 @@ This is not implemented yet!</dd>
     if not (lagtimes &gt; 0).all():
         raise TypeError(&#39;Lagtimes needs to be positive integers&#39;)
     if reversible:
-        raise TypeError(&#39;Reversible matrices are not anymore supported.&#39;)
+        raise NotImplementedError(
+            &#39;Reversible matrices are not anymore supported.&#39;
+        )
 
     if ntimescales is None:
         ntimescales = trajs.nstates - 1
